@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            document
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    </header>
+     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-matec">
+                <h3>Matec</h3>
+                <p>Sua plataforma de preparação matemática para o IFRN</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <a href="/">Início</a>
+                    <a href="#">Recursos</a>
+                    <a href="sobre.html">Sobre</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Suporte</h4>
+                    <a href="contato.html">Contato</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Matec. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

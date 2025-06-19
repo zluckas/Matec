@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fjalla+One&family=Playwrite+VN:wght@100..400&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    height: 100vh;
+  
+}
+
+
+
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(254, 255, 255);
+    top: 0;
+    z-index: 1000;
+  
+    
+}
+
+.logo {
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: "Fjalla One", serif;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #008f5e;
+}
+
+.logo a:hover {
+    color: #15C315;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.nav {
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+    font-size: 13px;
+    font-family: "Fjalla One", serif;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav a:hover {
+    margin-bottom: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.355);
+    border-radius: 20px;
+}
+
+.footer {
+    background: #2D3748;
+    color: #ffffff;
+    padding: 64px 32px 64px;
+    font-family: "Fjalla One", serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 64px;
+}
+
+.footer-brand p {
+    margin-top: 16px;
+    color: #b3b3b3;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.footer-section h4 {
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.footer-section a {
+    color: #b3b3b3;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 32px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #b3b3b3;
+}

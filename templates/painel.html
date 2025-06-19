@@ -1,0 +1,50 @@
+
+
+{% extends 'base2.html' %}
+
+{% block title %}Meu Painel{% endblock %}
+
+
+{% block conteudo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/painel.css') }}">
+<section>
+<div class="container">
+    <div class="content">
+        <div class="texto-init">
+            <h1>Meu Painel</h1>
+            <p>Gerencie seus estudos e acompanhe seu progresso</p>
+        </div>
+
+        <div class="boxs">
+            <div class="box-1">
+                <div class="img">
+                    <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="">
+                </div>
+                <h2>Meus estudos</h2>
+                <h3>Continue de onde parou</h3>
+                <h4><a href="{{url_for ('conteudos') }}">Continuar Estudando</a></h4>
+            </div>
+
+            <div class="box-2">
+                <div class="img">
+                    <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="">
+                </div>
+                <h2>Exercícios</h2>
+                <h3>Pratique com questões do IFRN</h3>
+                <h4><a href="#">Resolver Exercícios</a></h4>
+            </div>
+
+            <div class="box-3">
+                <div class="img">
+                    <img src="{{ url_for('static', filename='images/grupo.png') }}" alt="">
+                </div>
+                <h2>Comunidade</h2>
+                <h3>Interaja com outros estudantes</h3>
+                <h4><a href="#">Participar</a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+{% endblock %}
