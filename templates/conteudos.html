@@ -1,0 +1,75 @@
+{% extends 'base2.html' %}
+{% block title %}Conteúdos{% endblock %}
+{% block conteudo%}
+
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/conteudos.css') }}">
+
+<div class="content">
+            <div class="texto-init">
+            <h1>Conteúdos</h1>
+            <p>Explore os conteúdos e aprenda de forma simples, rápida e divertida com o Matec!</p>
+            </div>
+
+            <div class="boxs">
+                <div class="box-1">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Frações"></div>
+                    <h2>Frações</h2>
+                    <h3>Entenda as partes de um todo</h3>
+                    <h4 class="btn green"><a href="/fracao.html">Estudar Frações</a></h4>
+                    
+                </div>
+                <div class="box-2">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Proporções"></div>
+                    <h2>Proporções</h2>
+                    <h3>Relacione grandezas de forma proporcional</h3>
+                    <h4 class="btn green"><a href="#">Estudar Proporções</a></h4>
+                    
+                </div>
+                <div class="box-3">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Regra de três"></div>
+                    <h2>Regra de três</h2>
+                    <h3>Resolva problemas de proporção</h3>
+                    <h4 class="btn green"><a href="#">Estudar Regra de três</a></h4>
+                    
+                    
+                </div> 
+                <div class="box-4">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Notação científica"></div>
+                    <h2>Notação científica</h2>
+                    <h3>Trabalhe com números muito grandes ou pequenos</h3>
+                    <h4 class="btn green"><a href="#">Estudar Notação científica</a></h4>
+                </div>
+                <div class="box-5">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="MMC"></div>
+                    <h2>MMC</h2>
+                    <h3>Encontre o mínimo múltiplo comum</h3>
+                    <h4 class="btn green"><a href="#">Estudar MMC</a></h4>
+                </div>
+                <div class="box-6">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Porcentagem"></div>
+                    <h2>Porcentagem</h2>
+                    <h3>Calcule aumentos e descontos</h3>
+                    <h4 class="btn green"><a href="#">Estudar Porcentagem</a></h4>
+                </div>
+                <div class="box-7">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Probabilidade"></div>
+                    <h2>Probabilidade</h2>
+                    <h3>Calcule a chance de eventos ocorrerem</h3>
+                    <h4 class="btn green"><a href="#">Estudar Probabilidade</a></h4>
+                </div> 
+                <div class="box-8">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Gráficos"></div>
+                    <h2>Gráficos</h2>
+                    <h3>Interprete dados visuais</h3>
+                    <h4 class="btn green"><a href="#">Estudar Gráficos</a></h4>
+                </div>
+                <div class="box-9">
+                    <div class="img"><img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Geometria plana"></div>
+                    <h2>Geometria plana</h2>
+                    <h3>Explore formas e figuras no plano</h3>
+                    <h4 class="btn green"><a href="#">Estudar Geometria plana</a></h4>
+                </div>
+            </div>
+        </div>
+
+{%endblock%}
