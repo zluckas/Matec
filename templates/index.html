@@ -1,101 +1,109 @@
-
 {% extends 'base.html' %}
 
 {% block title %}Página Inicial{% endblock %}
 
-
 {% block conteudo %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicial.css') }}">
-    <main>
-        <section>
-            <div class="ladingpage">
-                <div class="main">
-                    <div class="contentmain">
-                        <div class="aprendamat">
-                            <p>Aprenda matemática </p>
-                            <p id="detaquemain">para o IFRN</p>
-                        </div>
-                        
-                        <p class="descricao">Prepare-se para o IFRN com nossa plataforma especializada em matemática. Conteúdo direcionado, exercícios práticos e suporte personalizado.</p>
-                        
-                        <div class="buttons">
-                            <a href="cadastro.html" class="btn green">Começar Agora</a>
-                            <a href="sobre.html" class="btn white">Saiba Mais</a>
-                        </div>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/inicial.css') }}">
+<main>
+    <section>
+        <div class="ladingpage">
+            <div class="main">
+                <div class="contentmain">
+                    <div class="aprendamat">
+                        <p>Aprenda matemática </p>
+                        <p id="detaquemain">para o IFRN</p>
+                    </div>
+                    
+                    <p class="descricao">
+                        Prepare-se para o IFRN com nossa plataforma especializada em matemática. 
+                        Conteúdo direcionado, exercícios práticos e suporte personalizado.
+                    </p>
+                    
+                    <div class="buttons">
+                        {% if current_user.is_authenticated %}
+                            <!-- Usuário logado: vai para o painel -->
+                            <a href="{{ url_for('painel') }}" class="btn green">Começar Agora</a>
+                        {% else %}
+                            <!-- Usuário não logado: vai para o login -->
+                            <a href="{{ url_for('login') }}" class="btn green">Começar Agora</a>
+                        {% endif %}
+                        <a href="{{ url_for('sobre') }}" class="btn white">Saiba Mais</a>
                     </div>
                 </div>
-                
-                <div class="icones">
-                    <div class="ico">
-                        <div class="card">
-                          <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora" class="calculadora">
-                            <br>
-                            <br>
-                            <p class="card-text">Exercícios Práticos</p>
-                        </div>
-                        <div class="card">
-                         <img src="{{ url_for('static', filename='images/camera-de-video.png') }}" alt="camera" class="camera">
-                            <br>
-                            <br>
-                            <p class="card-text">Videoaulas</p>
-                        </div>
-                        <div class="card">
-                            <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Material Didático" class="material">
-                            <br>
-                            <br>
-                            <p class="card-text">Material Didático</p>
-                        </div>
-                        <div class="card">
-                             <img src="{{ url_for('static', filename='images/grupo.png') }}" alt="Grupo" class="grupo">
-                            <br>
-                            <br>
-                            <p class="card-text">Comunidade</p>
-                        </div>
+            </div>
+            
+            <div class="icones">
+                <div class="ico">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/calculadora.png') }}" 
+                             alt="Calculadora" class="calculadora">
+                        <p class="card-text">Exercícios Práticos</p>
+                    </div>
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/camera-de-video.png') }}" 
+                             alt="Câmera" class="camera">
+                        <p class="card-text">Videoaulas</p>
+                    </div>
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" 
+                             alt="Material Didático" class="material">
+                        <p class="card-text">Material Didático</p>
+                    </div>
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/grupo.png') }}" 
+                             alt="Comunidade" class="grupo">
+                        <p class="card-text">Comunidade</p>
                     </div>
                 </div>
+            </div>
+        </div>
+       
+        <div class="saibamais" id="saibamais">
+            <div class="box1">
+                <div class="img">
+                    <img src="{{ url_for('static', filename='images/capelo.png') }}" alt="">
+                </div>
+                <div class="content">
+                    <h2>Conteúdo Completo</h2>
+                    <p>Material alinhado com os principais tópicos da matemática</p>
+                </div>
+            </div>
+    
+            <div class="box2">
+                <div class="img">
+                    <img src="{{ url_for('static', filename='images/tarefa.png') }}" alt="">
+                </div>
+                <div class="content">
+                    <h2>Exercícios direcionados</h2>
+                    <p>Pratique com questões específicas para cada tópico</p>
+                </div>
+            </div>
+    
+            <div class="box3">
+                <div class="img">
+                    <img src="{{ url_for('static', filename='images/usuario-saiba.png') }}" alt="">
+                </div>
+                <div class="content">
+                    <h2>Suporte Personalizado</h2>
+                    <p>Tire suas dúvidas com nossa comunidade</p>
+                </div>
+            </div>
+        </div>
 
-                
-            </div>
-           
-            <div class="saibamais" id="saibamais">
-                <div class="box1">
-                    <div class="img">
-                      <img src="{{ url_for('static', filename='images/capelo.png') }}" alt="">
-                    </div>
-                   <div class="content">
-                        <h2>Conteúdo Completo</h2>
-                        <p>Material alinhado com os principais tópicos da matemática</p>
-                   </div>
-                </div>
-        
-                <div class="box2">
-                    <div class="img">
-                        <img src="{{ url_for('static', filename='images/tarefa.png') }}" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Exercícios direcionados</h2>
-                        <p>Pratique com questões específicas para cada tópico</p>
-                    </div>
-                </div>
-        
-                <div class="box3">
-                    <div class="img">
-                        <img src="{{ url_for('static', filename='images/usuario-saiba.png') }}" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>Suporte Personalizado</h2>
-                        <p>Tire suas dúvidas com nossa comunidade</p>
-                    </div>
-                </div>
-            </div>
-            <div class="create" id="create">
-                <h3>Pronto para começar sua jornada?</h3>
-                <h5>Junte-se a milhares de estudantes que já estão se preparando para o IFRN</h5>
-                <a href="cadastro.html" class="button-criar-conta-gratuita">Criar Conta Gratuita</div><a>
-                
-            </div>
-        </section>
-    </main>
-  
+        <div class="create" id="create">
+            <h3>Pronto para começar sua jornada?</h3>
+            <h5>Junte-se a milhares de estudantes que já estão se preparando para o IFRN</h5>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('painel') }}" class="button-criar-conta-gratuita">
+                    Ir para o Painel
+                </a>
+            {% else %}
+                <a href="{{ url_for('cadastro') }}" class="button-criar-conta-gratuita">
+                    Criar Conta Gratuita
+                </a>
+            {% endif %}
+        </div>
 
+    </section>
+</main>
 {% endblock %}

@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Sobre{% endblock %}
+
+
+{% block conteudo %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sobre.css') }}">
+    <div>
+        <section>
+            <div class="container">
+                <h1>Sobre o Matec</h1>
+                <p>O Matec é uma plataforma de aprendizado de matemática voltada para estudantes do IFRN. Nosso objetivo é fornecer recursos de alta qualidade para ajudar os alunos a se prepararem para os desafios acadêmicos.</p>
+                
+                <h2>Recursos Disponíveis</h2>
+                <ul>
+                    <li>Videoaulas explicativas</li>
+                    <li>Exercícios práticos</li>
+                    <li>Material didático completo</li>
+                    <li>Comunidade ativa para suporte e troca de conhecimentos</li>
+                </ul>
+
+                <h2>Nosso Compromisso</h2>
+                <p>Estamos comprometidos em oferecer uma experiência de aprendizado acessível e eficaz, ajudando os alunos a alcançarem seus objetivos acadêmicos.</p>
+            </div>
+        </section>
+    </div>
+  
+
+{% endblock %}

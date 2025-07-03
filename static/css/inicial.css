@@ -1,3 +1,4 @@
+/* nao entendi esse painel aqui?? */
 #painel {
     background: #008f5e;
     color: white;
@@ -6,12 +7,13 @@
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 10px;
-    margin-right: 50px;
-      
+    margin-right: 50px;   
 }
+
 .ladingpage{
     background-color: #eaf7f5;
     display: flex;
+    border: 1px solid black;
 }
 .main {
     display: flex;
@@ -23,7 +25,9 @@
     height: 100vh;
     margin-top: 60px;
     border-radius: 16px;
-    
+
+    border: 1px solid black;
+
 }
 
 .contentmain{
@@ -35,19 +39,24 @@
     width: 70%;
     gap: 20px;
 
+    border: 1px solid  red; 
+
 }
 
 .aprendamat {
+    /* gambiarra */
     margin-left: 25px;
+    border: 1px solid black;
     
 }
 
 .aprendamat p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;  
     font-size: 60px;
     line-height: 1.1;
     font-weight: 800;
     color: #2c3e50;
+    border: 1px solid blue;
   
 }
 
@@ -114,8 +123,7 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.355);
     transition: transform 0.1s ease;
     transform:translateY(-3px);
-    
-    
+       
 } 
  
 
@@ -134,13 +142,11 @@
     align-items: center;
     gap: 25px; 
     width: 90%;
-    
-    /* animation: float 6s ease-in-out infinite; Manter ou remover a animação */
 }
 
 .card {
-    background: #ffffff; /* Cor branca */
-    width: 300px; /* Largura fixa para os cards */
+    background: #ffffff; 
+    width: 300px; 
     border-radius: 18px;
     padding-top: 20px;
     padding-bottom: 20px; 
@@ -170,7 +176,8 @@
 }
 
 .card-text {
-    font-size: 16px; 
+    font-size: 16px;
+    margin-top: 20px;
 }
 
 
@@ -181,6 +188,15 @@
     justify-content: center;
     height: 250px;
     gap: 30px;
+
+    border: 2px solid  yellow;
+}
+
+/* gambiarra para as imagens do saiba-mais */
+.saibamais img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
 }
 
 [class^="box"]{
@@ -253,6 +269,33 @@
 .create .button-criar-conta-gratuita:hover{
       transform:translateY(-3px);
 }
+
+/* Container que envolve o nome e o link de logout */
+.nav .nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  border: 3px solid pink;     /* espaço entre o texto e o link */
+}
+
+/* Estilizando o texto de boas-vindas */
+.nav .usuario-logado {
+  color: #15C315;     /* ou a cor que preferir */
+}
+
+/* Estilizando só o link “Sair” */
+.nav .sair {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+/* Exemplo de hover no link de sair */
+.nav .sair:hover {
+  background: rgba(0,0,0,0.05);
+}
+
 
 
 

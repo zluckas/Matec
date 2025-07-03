@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cadastro de Usuário</title>
+</head>
+<body>
+  <h2>Cadastro de Usuário</h2>
+
+  <!-- Formulário envia dados via POST para a mesma rota /cadastro -->
+  <form method="POST">
+    <!-- Campo para digitar o nome do usuário -->
+    <input type="text" name="usuario" placeholder="Usuário" required><br>
+
+    <!-- Campo para o nome completo -->
+    <input type="text" name="nome" placeholder="Nome completo" required><br>
+
+    <!-- Campo para a senha -->
+    <input type="password" name="senha" placeholder="Senha" required><br>
+
+    <!-- Botão para enviar o formulário -->
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <!-- Link para ir para a página de login -->
+  <p><a href="/login">Já tem conta? Faça login</a></p>
+
+  <!-- Aqui pode mostrar mensagens flash do Flask, como erros ou sucesso -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for msg in messages %}
+          <li style="color:red;">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+</body>
+</html>
