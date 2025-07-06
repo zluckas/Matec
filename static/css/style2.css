@@ -1,21 +1,30 @@
-.navbar {
-       display: flex;
-       align-items: center;
-       width: 100vw;
-       height: 8vh; 
-       background-color: white; 
-       justify-content: center;
-       gap: 44%;
-       padding: 30px;
-       position: fixed; 
-       z-index: 1000;
-       top:0;
-     
-       
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
+body {
+    height: 100vh;
+}
+
+/* Navbar fixa no topo */
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 8vh;
+    background-color: rgb(254, 255, 255);
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo ocupa 50% da largura e centraliza conteúdo */
 .logo {
     display: flex;
+    width: 50vw;
     justify-content: center;
     align-items: center;
     font-size: 30px;
@@ -24,50 +33,57 @@
 
 .logo a {
     text-decoration: none;
-    color: #008f5e;
+    color: #2D3748;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .logo a:hover {
     color: #15C315;
+    transition: all 0.2s ease-in-out;
 }
 
 .logo img {
     width: 40px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
-
-.botao-sair,
-.botao-extra {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    border-radius: 10px;
-    width: 80px;
-    color: white;
-    background-color: #008f5e;
-    font-family: "Fjalla One", serif;
-    font-size: 15px;
-   
-   
-}
-
-
-.botao-sair:hover,
-.botao-extra:hover {
-    position: relative;
-    transition: transform 0.1s ease;
-    transform: translateY(-3px);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.355);
-}
-
 
 .botoes-nav {
     display: flex;
-    gap: 10px;
+    width: 50vw; /* importantíssimo para dividir a navbar em duas metades */
+    justify-content: flex-end; /* alinhar conteúdo ao canto direito */
+    align-items: center;
+    padding-right: 30px; /* espaçamento da borda direita */
+    font-family: "Fjalla One", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-right: 130px
+    
+}
+
+/* Texto de saudação ao usuário */
+#user {
+    color: #15C315;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo dos botões Sair e Extra */
+.botao-sair,
+.botao-extra {
+    color: black;
+    text-decoration: none;
+    padding: 4px 10px;
+    transition: all 0.2s ease-in-out;
+    font-family: "Fjalla One", serif;
+}
+
+.botao-extra{
+    margin-right: 50px;
+}
+
+.botao-sair:hover,
+.botao-extra:hover {
+    border-bottom: 3px solid #15C315 ;
 }

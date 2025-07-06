@@ -12,7 +12,6 @@ body{
 }
 
 
-
 .navbar {
     display: flex;
     position: fixed;
@@ -36,12 +35,14 @@ body{
 
 .logo a {
     text-decoration: none;
-    color: #008f5e;
+    color: #2D3748;
 }
 
 .logo a:hover {
     color: #15C315;
+    transition: all 0.2s ease-in-out;
 }
+
 
 .logo img {
     width: 40px;
@@ -61,16 +62,15 @@ body{
 .nav a {
     text-decoration: none;
     color: black;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 4px 20px;
     transition: all 0.2s ease-in-out;
 }
 
 .nav a:hover {
-    margin-bottom: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.355);
-    border-radius: 20px;
+    border-bottom: 3px solid #15C315 ;
 }
+
+
 
 .footer {
     background: #2D3748;
@@ -125,4 +125,17 @@ body{
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     color: #b3b3b3;
+}
+
+.nav .sair {
+    text-decoration: none;
+    padding: 4px;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav .usuario-logado {
+    text-decoration: none;
+    padding: 4px -10px;
+    color: #15C315;
 }

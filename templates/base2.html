@@ -21,9 +21,11 @@
         <div class="botoes-nav">
             {% if request.path == url_for('conteudos') %}
                 <a class="botao-extra" href="{{ url_for('painel') }}">Voltar</a>
-                
+                   
             {% endif %}
-            <a class="botao-sair" href="{{ url_for('index') }}">SAIR</a>
+            <a id = "user"> Olá, {{ current_user.nome }} </a>
+            
+            <a class="botao-sair" href="{{ url_for('index') }}">Sair</a>
         </div>
     </div>
 

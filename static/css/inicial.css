@@ -1,19 +1,18 @@
-/* nao entendi esse painel aqui?? */
-#painel {
-    background: #008f5e;
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 10px;
-    margin-right: 50px;   
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    height: 100vh;
 }
 
 .ladingpage{
     background-color: #eaf7f5;
     display: flex;
-    border: 1px solid black;
 }
 .main {
     display: flex;
@@ -25,9 +24,6 @@
     height: 100vh;
     margin-top: 60px;
     border-radius: 16px;
-
-    border: 1px solid black;
-
 }
 
 .contentmain{
@@ -38,16 +34,11 @@
     height: 80%;
     width: 70%;
     gap: 20px;
-
-    border: 1px solid  red; 
-
 }
 
 .aprendamat {
     /* gambiarra */
     margin-left: 25px;
-    border: 1px solid black;
-    
 }
 
 .aprendamat p {
@@ -56,14 +47,13 @@
     line-height: 1.1;
     font-weight: 800;
     color: #2c3e50;
-    border: 1px solid blue;
-  
 }
 
 #detaquemain {
     color: #008f5e;
     font-weight: 900;
-    font-size: 75px;  
+    font-size: 75px; 
+    
 }
 
 .descricao {
@@ -77,7 +67,6 @@
     margin-bottom: 32px;
     margin-left: 30px;
     margin-right: 25px;
-    
 }
 
 .buttons {
@@ -85,8 +74,7 @@
     justify-content: left;
     gap: 40px;
     margin-left: 27px;
-    font-family: "Fjalla One", serif;
-    
+    font-family: "Fjalla One", serif;   
 }
 
 .btn {
@@ -103,6 +91,7 @@
     align-items: center;
     flex-direction: column;
 }
+
 .create >h3,h5{
     color: white;
     
@@ -188,8 +177,6 @@
     justify-content: center;
     height: 250px;
     gap: 30px;
-
-    border: 2px solid  yellow;
 }
 
 /* gambiarra para as imagens do saiba-mais */
@@ -211,6 +198,7 @@
     box-shadow: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+ 
 }
 
 [class^="box"]:hover{
@@ -238,7 +226,6 @@
 .create{
     height: 350px;
     background-color: #008f5e;
-    border: 1px solid black;
 }
 
 .create h3{
@@ -270,31 +257,15 @@
       transform:translateY(-3px);
 }
 
-/* Container que envolve o nome e o link de logout */
-.nav .nav-user {
-  display: flex;
-  align-items: center;
-  gap: 0.1rem;
-  border: 3px solid pink;     /* espaço entre o texto e o link */
-}
 
-/* Estilizando o texto de boas-vindas */
-.nav .usuario-logado {
-  color: #15C315;     /* ou a cor que preferir */
-}
-
-/* Estilizando só o link “Sair” */
 .nav .sair {
   text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  transition: background 0.2s ease;
+  padding: 4px 20px;
+  
 }
 
-/* Exemplo de hover no link de sair */
-.nav .sair:hover {
-  background: rgba(0,0,0,0.05);
-}
+
+
 
 
 
