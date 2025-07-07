@@ -125,3 +125,9 @@ body{
     letter-spacing: 0.9px;
     cursor: pointer;
 }
+
+.btn a {
+  text-decoration: none;   
+   color: inherit;           
+ 
+}
