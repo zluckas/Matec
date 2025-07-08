@@ -25,14 +25,6 @@
   <p><a href="/login">Já tem conta? Faça login</a></p>
 
   <!-- Aqui pode mostrar mensagens flash do Flask, como erros ou sucesso -->
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <ul>
-        {% for msg in messages %}
-          <li style="color:red;">{{ msg }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endwith %}
+{% include 'components/flash_messages.html' %}
 </body>
 </html>
