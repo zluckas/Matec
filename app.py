@@ -51,45 +51,52 @@ def sobre():
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
-        usuario = request.form['usuario']  # Captura o nome de usuário do formulário
-        nome = request.form['nome']        # Captura o nome completo
-        senha = request.form['senha']      # Captura a senha
+        # Captura os dados do formulário de forma segura
+        email = request.form.get('email')
+        senha = request.form.get('senha')
+        nome = request.form.get('nome')
+        data_nascimento = request.form.get('data_nascimento')
 
-        # Verifica se usuário já existe
-        if usuario in usuarios:
-            flash('Usuário já existe! Escolha outro nome.')
+        # Verifica se algum campo está vazio
+        if not email or not nome or not senha or not data_nascimento:
+            flash('Por favor, preencha todos os campos.')
+            return redirect(url_for('cadastro'))
+
+        # Verifica se o usuário já existe
+        if email in usuarios:
+            flash('Usuário já existe! Escolha outro email.')
             return redirect(url_for('cadastro'))
 
         # Gera hash seguro da senha
         senha_hash = generate_password_hash(senha)
 
-        # Salva o usuário no dicionário em memória
-        usuarios[usuario] = {
-            'id': usuario,
+        # Salva o usuário no "banco de dados" em memória
+        usuarios[email] = {
+            'id': email,
             'nome': nome,
-            'senha_hash': senha_hash
+            'senha_hash': senha_hash,
+            'data_nascimento': data_nascimento
         }
 
-        flash('Cadastro realizado! Faça login.')
+        flash('Cadastro realizado com sucesso! Faça login.')
         return redirect(url_for('login'))
 
-    return render_template('cadastro.html')  # Mostra formulário de cadastro
+    return render_template('cadastro.html')  
 
 # Rota para login de usuários
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        usuario = request.form['usuario']  # Nome de usuário do formulário
-        senha = request.form['senha']      # Senha digitada
+        email = request.form.get('email')  # email do usuário do formulário
+        senha = request.form.get('senha')      # Senha digitada
 
-        dados = usuarios.get(usuario)  # Busca o usuário no "banco"
+        dados = usuarios.get(email)  # Busca o usuário no "banco"
 
-        # Verifica se usuário existe e senha está correta
         if dados and check_password_hash(dados['senha_hash'], senha):
-            user = Usuario(dados['id'], dados['nome'], dados['senha_hash'])  # Cria objeto usuário
+            user = Usuario(dados['id'], dados['nome'], dados['senha_hash'])# Cria objeto usuário
             login_user(user)  # Realiza o login (cria sessão)
             flash('Login realizado com sucesso!')
-            return redirect(url_for('painel'))
+            return redirect(url_for('painel'))  # Redireciona após login
 
         flash('Usuário ou senha incorretos.')
         return redirect(url_for('login'))
