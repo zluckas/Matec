@@ -43,7 +43,7 @@ def conteudos():
     return render_template('conteudos.html')
 
 @app.route('/sobre')
-@login_required
+#@login_required
 def sobre():
     return render_template('sobre.html')
 
