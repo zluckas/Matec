@@ -2,14 +2,16 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import sqlite3
+
 app = Flask(__name__)
 app.secret_key = 'uma-chave-secreta-segura'  # Chave usada para proteger sessões e cookies
 
 login_manager = LoginManager(app)  # Inicializa o Flask-Login no app Flask
 login_manager.login_view = 'login'  # Define a rota de login para redirecionar usuários não autenticados
 
-# Banco de dados temporário em memória para armazenar usuários
-usuarios = {}
+# Criar o banco
+database = 'banco.db'
 
 # Classe de usuário que o Flask-Login utiliza para gerenciar sessão
 class Usuario(UserMixin):
@@ -25,6 +27,10 @@ def load_user(user_id):
     if dados:
         return Usuario(dados['id'], dados['nome'], dados['senha_hash'])  # Cria objeto usuário para sessão
     return None  # Retorna None se usuário não encontrado
+
+# função para conectar ao banco de dados
+def conectar():
+    return sqlite3.connect(database)
 
 @app.route('/')
 def index():
@@ -55,20 +61,23 @@ def cadastro():
         nome = request.form['nome']        # Captura o nome completo
         senha = request.form['senha']      # Captura a senha
 
+        db = conectar()
+        sql = 'SELECT * FROM usuarios WHERE nome = ?'
+        resultado = db.execute(sql, (nome)).fetchone()
+
         # Verifica se usuário já existe
-        if usuario in usuarios:
+        if resultado:
             flash('Usuário já existe! Escolha outro nome.')
             return redirect(url_for('cadastro'))
 
         # Gera hash seguro da senha
         senha_hash = generate_password_hash(senha)
 
-        # Salva o usuário no dicionário em memória
-        usuarios[usuario] = {
-            'id': usuario,
-            'nome': nome,
-            'senha_hash': senha_hash
-        }
+        # Salva o usuário no banco 
+        sql = 'INSERT INTO usuarios (usuario, nome, senha) VALUES (?, ?, ?)'
+        db.execute(sql, (usuario, nome, senha_hash))
+        db.commit()
+        db.close()
 
         flash('Cadastro realizado! Faça login.')
         return redirect(url_for('login'))
@@ -82,11 +91,13 @@ def login():
         usuario = request.form['usuario']  # Nome de usuário do formulário
         senha = request.form['senha']      # Senha digitada
 
-        dados = usuarios.get(usuario)  # Busca o usuário no "banco"
+        db = conectar()
+        sql = 'SELECT * FROM usuarios WHERE nome = ?'
+        resultado = db.execute(sql, (usuario)).fetchone()  # Busca o usuário no "banco"
 
         # Verifica se usuário existe e senha está correta
-        if dados and check_password_hash(dados['senha_hash'], senha):
-            user = Usuario(dados['id'], dados['nome'], dados['senha_hash'])  # Cria objeto usuário
+        if resultado and check_password_hash(resultado[3], senha):
+            user = Usuario(resultado[0], resultado[1], resultado[3])  # Cria objeto usuário
             login_user(user)  # Realiza o login (cria sessão)
             flash('Login realizado com sucesso!')
             return redirect(url_for('painel'))
