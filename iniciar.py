@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS usuarios (
     nome TEXT NOT NULL,
     senha TEXT NOT NULL
 )
-''')
+''');

@@ -20,12 +20,15 @@ class Usuario(UserMixin):
         self.nome = nome  # Nome do usuário (para mostrar, por exemplo)
         self.senha_hash = senha_hash  # Senha armazenada em formato hash (não em texto)
 
-# Função obrigatória para o Flask-Login carregar um usuário a partir do ID salvo na sessão
+# Função obrigatória para o Flask-Login carregar um usuário a partir do ID salvo no banco
 @login_manager.user_loader
 def load_user(user_id):
-    dados = usuarios.get(user_id)  # Busca usuário no "banco" pelo ID
+    db = conectar()
+    sql = 'SELECT * FROM usuarios WHERE id = ?'
+    dados = db.execute(sql, (user_id, )).fetchone()  # Busca usuário no banco pelo ID
     if dados:
-        return Usuario(dados['id'], dados['nome'], dados['senha_hash'])  # Cria objeto usuário para sessão
+        return Usuario(dados[0], dados[1], dados[3]) # Cria objeto usuário
+    db.close()   
     return None  # Retorna None se usuário não encontrado
 
 # função para conectar ao banco de dados
@@ -63,7 +66,7 @@ def cadastro():
 
         db = conectar()
         sql = 'SELECT * FROM usuarios WHERE nome = ?'
-        resultado = db.execute(sql, (nome)).fetchone()
+        resultado = db.execute(sql, (nome, )).fetchone()
 
         # Verifica se usuário já existe
         if resultado:
@@ -92,8 +95,8 @@ def login():
         senha = request.form['senha']      # Senha digitada
 
         db = conectar()
-        sql = 'SELECT * FROM usuarios WHERE nome = ?'
-        resultado = db.execute(sql, (usuario)).fetchone()  # Busca o usuário no "banco"
+        sql = 'SELECT * FROM usuarios WHERE usuario = ?'
+        resultado = db.execute(sql, (usuario, )).fetchone()  # Busca o usuário no "banco"
 
         # Verifica se usuário existe e senha está correta
         if resultado and check_password_hash(resultado[3], senha):
@@ -101,6 +104,7 @@ def login():
             login_user(user)  # Realiza o login (cria sessão)
             flash('Login realizado com sucesso!')
             return redirect(url_for('painel'))
+        db.close()
 
         flash('Usuário ou senha incorretos.')
         return redirect(url_for('login'))
