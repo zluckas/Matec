@@ -20,7 +20,7 @@ class Usuario(UserMixin):
         self.nome = nome  # Nome do usuário (para mostrar, por exemplo)
         self.senha_hash = senha_hash  # Senha armazenada em formato hash (não em texto)
 
-# Função obrigatória para o Flask-Login carregar um usuário a partir do ID salvo no banco
+# Função obrigatória para o Flask-Login carregar um usuário a partir do ID salvo no banco de dados
 @login_manager.user_loader
 def load_user(user_id):
     db = conectar()
