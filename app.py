@@ -2,16 +2,18 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
-import sqlite3
+from db import db
+from models import Usuario
 
 app = Flask(__name__)
 app.secret_key = 'uma-chave-secreta-segura'  # Chave usada para proteger sessões e cookies
 
+# configurações inicias do banco
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///banco.db'
+db.init_app(app)
+
 login_manager = LoginManager(app)  # Inicializa o Flask-Login no app Flask
 login_manager.login_view = 'login'  # Define a rota de login para redirecionar usuários não autenticados
-
-# Criar o banco
-database = 'banco.db'
 
 # Classe de usuário que o Flask-Login utiliza para gerenciar sessão
 class Usuario(UserMixin):
@@ -23,17 +25,10 @@ class Usuario(UserMixin):
 # Função obrigatória para o Flask-Login carregar um usuário a partir do ID salvo no banco de dados
 @login_manager.user_loader
 def load_user(user_id):
-    db = conectar()
-    sql = 'SELECT * FROM usuarios WHERE id = ?'
-    dados = db.execute(sql, (user_id, )).fetchone()  # Busca usuário no banco pelo ID
+    dados = db.session.query(Usuario).filter_by(id=user_id).first()  # Busca usuário no banco pelo ID
     if dados:
-        return Usuario(dados[0], dados[1], dados[3]) # Cria objeto usuário
-    db.close()   
+        return Usuario(dados[0], dados[1], dados[2]) # Cria objeto usuário
     return None  # Retorna None se usuário não encontrado
-
-# função para conectar ao banco de dados
-def conectar():
-    return sqlite3.connect(database)
 
 @app.route('/')
 def index():
@@ -71,9 +66,7 @@ def cadastro():
             flash('Por favor, preencha todos os campos.')
             return redirect(url_for('cadastro'))
 
-        db = conectar()
-        sql = 'SELECT * FROM usuarios WHERE nome = ?'
-        resultado = db.execute(sql, (nome, )).fetchone()
+        resultado = db.session.query(Usuario).filter_by(nome=nome).first()
 
         # Verifica se usuário já existe
         if resultado:
@@ -126,5 +119,7 @@ def logout():
     flash('Você saiu com sucesso.')
     return redirect(url_for('login'))  # Redireciona para a página de login
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)  

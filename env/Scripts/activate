@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\20231101110048\Documents\Matec_\env"
+VIRTUAL_ENV="C:\Users\20231101110022\Documents\matec\Matec\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
