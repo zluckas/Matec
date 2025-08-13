@@ -3,12 +3,14 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from db import db
-from models import Usuario
+from models import User
+
+import datetime
+
 
 app = Flask(__name__)
 app.secret_key = 'uma-chave-secreta-segura'  # Chave usada para proteger sessões e cookies
 
-# configurações inicias do banco
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///banco.db'
 db.init_app(app)
 
@@ -22,12 +24,13 @@ class Usuario(UserMixin):
         self.nome = nome  # Nome do usuário (para mostrar, por exemplo)
         self.senha_hash = senha_hash  # Senha armazenada em formato hash (não em texto)
 
-# Função obrigatória para o Flask-Login carregar um usuário a partir do ID salvo no banco de dados
+# Função obrigatória para o Flask-Login carregar um usuário a partir do ID salvo no banco
 @login_manager.user_loader
 def load_user(user_id):
-    dados = db.session.query(Usuario).filter_by(id=user_id).first()  # Busca usuário no banco pelo ID
+    dados = db.session.query(User).filter_by(id=user_id).first()
     if dados:
-        return Usuario(dados[0], dados[1], dados[2]) # Cria objeto usuário
+        return Usuario(dados.id, dados.username, dados.senha) # Cria objeto usuário
+    db.close()   
     return None  # Retorna None se usuário não encontrado
 
 @app.route('/')
@@ -59,28 +62,34 @@ def cadastro():
         email = request.form.get('email')
         senha = request.form.get('senha')
         nome = request.form.get('nome')
+        username = request.form.get('username')
         data_nascimento = request.form.get('data_nascimento')
 
         # Verifica se algum campo está vazio
-        if not email or not nome or not senha or not data_nascimento:
+        if not email or not nome or not senha or not data_nascimento or not username:
             flash('Por favor, preencha todos os campos.')
             return redirect(url_for('cadastro'))
 
-        resultado = db.session.query(Usuario).filter_by(nome=nome).first()
+        dados = db.session.query(User).filter_by(username=username).first()
 
         # Verifica se usuário já existe
-        if resultado:
+        if dados:
             flash('Usuário já existe! Escolha outro nome.')
+
             return redirect(url_for('cadastro'))
 
         # Gera hash seguro da senha
         senha_hash = generate_password_hash(senha)
+
+        
+        data_nasc = datetime.datetime.strptime(data_nascimento, "%Y-%m-%d").date()
+
+        # definir o usuário a ser salvo
+        new_user = User(nome=nome, username=username, email=email, senha=senha_hash, data_nascimento=data_nasc)
         
         # Salva o usuário no banco 
-        sql = 'INSERT INTO usuarios (usuario, nome, senha) VALUES (?, ?, ?)'
-        db.execute(sql, (usuario, nome, senha_hash))
-        db.commit()
-        db.close()
+        db.session.add(new_user)
+        db.session.commit()
 
         flash('Cadastro realizado com sucesso! Faça login.')
         return redirect(url_for('login'))
@@ -94,18 +103,16 @@ def login():
         email = request.form.get('email')  # email do usuário do formulário
         senha = request.form.get('senha')      # Senha digitada
 
-        db = conectar()
-        sql = 'SELECT * FROM usuarios WHERE usuario = ?'
-        resultado = db.execute(sql, (usuario, )).fetchone()  # Busca o usuário no "banco"
+        # buscar usuário no banco
+        resultado = db.session.query(User).filter_by(email=email).first()
 
         # Verifica se usuário existe e senha está correta
-        if resultado and check_password_hash(resultado[3], senha):
-            user = Usuario(resultado[0], resultado[1], resultado[3])  # Cria objeto usuário
+        if resultado and check_password_hash(resultado.senha, senha):
+            user = Usuario(resultado.id, resultado.username, resultado.senha)  # Cria objeto usuário
             login_user(user)  # Realiza o login (cria sessão)
             flash('Login realizado com sucesso!')
             return redirect(url_for('painel'))
-        db.close()
-        
+
         flash('Usuário ou senha incorretos.')
         return redirect(url_for('login'))
 
@@ -119,7 +126,7 @@ def logout():
     flash('Você saiu com sucesso.')
     return redirect(url_for('login'))  # Redireciona para a página de login
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     with app.app_context():
         db.create_all()
     app.run(debug=True)  
