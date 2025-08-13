@@ -15,7 +15,7 @@ body {
 form {
 
     width: 400px;
-    margin: 60px auto 40px auto; /* centralizado com margem superior para não ficar atrás da navbar */
+    margin: 25px auto; /* centralizado com margem superior para não ficar atrás da navbar */
     background-color: #f9f9f9;
     padding: 25px 30px;
     border-radius: 8px;
@@ -73,7 +73,6 @@ form button:hover {
 p {
     text-align: center;
     font-family: 'Fjalla One', sans-serif;
-    margin-top: 18px;
 }
 
 p a {
@@ -86,10 +85,9 @@ p a:hover {
     text-decoration: underline;
 }
 h2 {
-    padding-top:50px ;
+    margin-top:90px ;
     text-align: center;
     font-size: 30px;
     font-family: 'Fjalla One', sans-serif;
  
 }
-
