@@ -1,6 +1,6 @@
 # Matec
 
-Matec é uma plataforma web de aprendizado de matemática voltada para estudantes do IFRN. O objetivo é fornecer conteúdos direcionados, exercícios práticos e suporte personalizado para ajudar alunos a se prepararem para os desafios acadêmicos.
+Matec é uma plataforma web de aprendizado de matemática voltada para estudantes do IFRN. O objetivo é fornecer conteúdos direcionados, exercícios práticos e suporte personalizado para ajudar alunos a se prepararem para o exame de seleção.
 
 ## Funcionalidades
 
