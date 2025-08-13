@@ -30,7 +30,6 @@ def load_user(user_id):
     dados = db.session.query(User).filter_by(id=user_id).first()
     if dados:
         return Usuario(dados.id, dados.username, dados.senha) # Cria objeto usuário
-    db.close()   
     return None  # Retorna None se usuário não encontrado
 
 @app.route('/')
