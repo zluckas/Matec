@@ -104,7 +104,7 @@ Matec/
 
 Este projeto é apenas para fins educacionais.
 <div align="center">
-  <img src="static/images/mateco_sentado.png" alt="Logo Matec" width="150" style="vertical-align: middle; margin-right: 10px;">
+  <img src="static/images/mateco_sentado.png" alt="Logo Matec" width="100" style="vertical-align: middle; margin-right: 10px;">
 </div>
 
 ---
