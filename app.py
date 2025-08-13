@@ -80,7 +80,7 @@ def cadastro():
         # Gera hash seguro da senha
         senha_hash = generate_password_hash(senha)
 
-        
+        # Formatação da data de forma que o SQLite aceite o formato "YYYY-MM-DD"
         data_nasc = datetime.datetime.strptime(data_nascimento, "%Y-%m-%d").date()
 
         # definir o usuário a ser salvo
