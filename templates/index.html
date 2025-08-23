@@ -4,14 +4,14 @@
 
 {% block conteudo %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/inicial.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Fjalla+One&display=swap" rel="stylesheet">
 <main>
-    <section>
-        <div class="ladingpage">
-            <div class="main">
-                <div class="contentmain">
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
                     <div class="aprendamat">
-                        <p>Aprenda matemática </p>
-                        <p id="detaquemain">para o IFRN</p>
+                        <h1>Aprenda matemática <span>para o IFRN</span></h1>
                     </div>
                     
                     <p class="descricao">
@@ -29,43 +29,52 @@
                         {% endif %}
                         <a href="{{ url_for('sobre') }}" class="btn white">Saiba Mais</a>
                     </div>
-                    
-                    <div class="mateco-avatar">
-                        <img src="{{ url_for('static', filename='images/mateco_sentado.png') }}" alt="Mateco" class="mateco-img">
-                    </div>
                 </div>
-            </div>
-            
-            <div class="icones">
-                <div class="ico">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/calculadora.png') }}" 
-                             alt="Calculadora" class="calculadora">
-                        <p class="card-text">Exercícios Práticos</p>
-                    </div>
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/camera-de-video.png') }}" 
-                             alt="Câmera" class="camera">
-                        <p class="card-text">Videoaulas</p>
-                    </div>
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" 
-                             alt="Material Didático" class="material">
-                        <p class="card-text">Material Didático</p>
-                    </div>
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/grupo.png') }}" 
-                             alt="Comunidade" class="grupo">
-                        <p class="card-text">Comunidade</p>
-                    </div>
+                
+                <div class="hero-image">
+                    <img src="{{ url_for('static', filename='images/mateco_sentado.png') }}" alt="Mateco" class="mateco-img">
                 </div>
             </div>
         </div>
-       
-
-
-  
-
+    </section>
+    
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">O que oferecemos</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora">
+                    </div>
+                    <h3>Exercícios Práticos</h3>
+                    <p>Pratique com exercícios específicos para o exame do IFRN</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/camera-de-video.png') }}" alt="Câmera">
+                    </div>
+                    <h3>Videoaulas</h3>
+                    <p>Aprenda com videoaulas explicativas sobre cada tópico</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Material Didático">
+                    </div>
+                    <h3>Material Didático</h3>
+                    <p>Acesse materiais completos para estudar onde quiser</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/grupo.png') }}" alt="Comunidade">
+                    </div>
+                    <h3>Comunidade</h3>
+                    <p>Conecte-se com outros estudantes e tire suas dúvidas</p>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 {% endblock %}
