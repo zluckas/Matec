@@ -53,6 +53,22 @@ def conteudos():
 def sobre():
     return render_template('sobre.html')
 
+@app.route('/contato', methods=['GET', 'POST'])
+def contato():
+    if request.method == 'POST':
+        # Aqui você pode adicionar a lógica para processar o formulário de contato
+        # Por exemplo, enviar um e-mail ou salvar no banco de dados
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        assunto = request.form.get('assunto')
+        mensagem = request.form.get('mensagem')
+        
+        # Exemplo de feedback para o usuário
+        flash('Mensagem enviada com sucesso! Entraremos em contato em breve.')
+        return redirect(url_for('contato'))
+        
+    return render_template('contato.html')
+
 # Rota para cadastro de novos usuários
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
@@ -128,4 +144,4 @@ def logout():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-    app.run(debug=True)  
+    app.run(debug=True)

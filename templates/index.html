@@ -29,6 +29,10 @@
                         {% endif %}
                         <a href="{{ url_for('sobre') }}" class="btn white">Saiba Mais</a>
                     </div>
+                    
+                    <div class="mateco-avatar">
+                        <img src="{{ url_for('static', filename='images/mateco_sentado.png') }}" alt="Mateco" class="mateco-img">
+                    </div>
                 </div>
             </div>
             
@@ -58,51 +62,9 @@
             </div>
         </div>
        
-        <div class="saibamais" id="saibamais">
-            <div class="box1">
-                <div class="img">
-                    <img src="{{ url_for('static', filename='images/capelo.png') }}" alt="">
-                </div>
-                <div class="content">
-                    <h2>Conteúdo Completo</h2>
-                    <p>Material alinhado com os principais tópicos da matemática</p>
-                </div>
-            </div>
-    
-            <div class="box2">
-                <div class="img">
-                    <img src="{{ url_for('static', filename='images/tarefa.png') }}" alt="">
-                </div>
-                <div class="content">
-                    <h2>Exercícios direcionados</h2>
-                    <p>Pratique com questões específicas para cada tópico</p>
-                </div>
-            </div>
-    
-            <div class="box3">
-                <div class="img">
-                    <img src="{{ url_for('static', filename='images/usuario-saiba.png') }}" alt="">
-                </div>
-                <div class="content">
-                    <h2>Suporte Personalizado</h2>
-                    <p>Tire suas dúvidas com nossa comunidade</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="create" id="create">
-            <h3>Pronto para começar sua jornada?</h3>
-            <h5>Junte-se a milhares de estudantes que já estão se preparando para o IFRN</h5>
-            {% if current_user.is_authenticated %}
-                <a href="{{ url_for('painel') }}" class="button-criar-conta-gratuita">
-                    Ir para o Painel
-                </a>
-            {% else %}
-                <a href="{{ url_for('cadastro') }}" class="button-criar-conta-gratuita">
-                    Criar Conta Gratuita
-                </a>
-            {% endif %}
-        </div>
+
+  
 
     </section>
 </main>

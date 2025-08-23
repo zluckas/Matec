@@ -97,6 +97,23 @@ body {
     
 }
 
+.mateco-avatar {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.mateco-img {
+    max-width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.mateco-img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
 .green {
     background-color: #008f5e; 
     color: white;

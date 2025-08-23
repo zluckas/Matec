@@ -1,109 +1,371 @@
+/* Estilos Gerais */
+:root {
+    --primary-color: #008f5e;
+    --secondary-color: #00bf7d;
+    --accent-color: #004d31;
+    --light-bg: #eaf7f5;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --border-radius: 12px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #eaf7f5;
+    background-color: var(--light-bg);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
 }
 
 .pagina {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    width: 100%;
 }
 
 .container {
-    height: 1200px;
-    width: 1900px;
-    margin-top: 30px;
-     /* gambiarra */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    align-items: center;
 }
 
-.sobre {
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    height: 400px;
-    width: 1100px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    gap: 20px;
+h1, h2, h3, h4 {
+    font-family: "Fjalla One", serif;
+    margin: 0;
 }
 
-.titulo-sobre{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    font-size: 20px;
+p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+.divider {
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary-color);
+    margin: 10px 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ffeb3b;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px 0;
+}
+
+/* Sobre Card */
+.sobre-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.sobre-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
 }
 
 .conteudo-sobre {
-    font-family: "Fjalla One", serif;
+    margin-top: 20px;
+}
+
+.conteudo-sobre p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.valores-container {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 40px;
-}
-
-ul{
-    list-style: none;
-}
-
-.titulo-sobre > h1 {
-    color: #008f5e;
-    font-family: "Fjalla One", serif; 
-}
-
-.container-colaboradores {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 1400px;
-    height: 400px;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
-    border-radius: 20px;
+    margin-top: 30px;
 }
 
-.container-colaboradores > h1 {
-    color: #008f5e;
-    font-family: "Fjalla One", serif; 
-    font-size: 40px;
+.valor-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 143, 94, 0.05);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.valor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+}
+
+.valor-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.valor-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Recursos */
+.recursos-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.recursos-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.recursos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.recurso-item {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 300px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    background-color: rgba(0, 143, 94, 0.05);
+}
+
+.recurso-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+}
+
+.recurso-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.recurso-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Equipe */
+.equipe-section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.equipe-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.equipe-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.equipe-description {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.colaboradores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .colaborador {
-    width: 250px;
-    height: 250px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.129);
-    border-radius: 20px;
-    gap: 5px;
+    flex: 1 1 280px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
 }
 
-.colaborador > img {
-    height: 150px;
-    width:150px ;
-    margin-top: 5px;
-    border-radius: 10px;
+.colaborador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.colaborador > h4 {
-    font-family: "Fjalla One", serif; 
+.colaborador-img {
+    text-align: center;
+    padding: 20px 20px 0;
 }
 
-.colaborador > p{
-    font-family: 'Poppins', sans-serif;
+.colaborador-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
 }
 
+.colaborador-info {
+    padding: 20px;
+    text-align: center;
+}
 
-.colaboradores {
-    width: 1200px;
-    display: flex;
-    height: 350px;
-    gap: 20px;
+.colaborador-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.colaborador-role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.colaborador-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Contato */
+.contato-section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.contato-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.contato-content {
+    margin-top: 20px;
+}
+
+.contato-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.btn-contato {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-contato:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .valores-container {
+        justify-content: center;
+    }
+    
+    .valor-item {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .sobre-card, .recursos-card, .equipe-section, .contato-section {
+        padding: 30px;
+    }
+    
+    .recurso-item {
+        flex: 1 1 100%;
+    }
+    
+    .colaborador {
+        flex: 1 1 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .sobre-header h2, .recursos-header h2, .equipe-header h2, .contato-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .valor-item {
+        min-width: 100%;
+    }
+}
+}
 }

@@ -3,64 +3,167 @@
 
 {% block title %}Sobre{% endblock %}
 
-
 {% block conteudo %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sobre.css') }}">
     <div class="pagina">
-        <section>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Sobre o <span class="highlight">Matec</span></h1>
+                <p class="hero-description">Transformando o aprendizado de matemática para estudantes do IFRN</p>
+            </div>
+        </div>
+
+        <section class="main-content">
             <div class="container">
-                <div class="sobre">
-                    <div class="titulo-sobre">
-                        <h1>Sobre o Matec</h1>
+                <div class="sobre-card">
+                    <div class="sobre-header">
+                        <h2>Nossa Missão</h2>
+                        <div class="divider"></div>
                     </div>
                     <div class="conteudo-sobre">
-                        <p>O <strong>Matec</strong> é uma plataforma de aprendizado de matemática voltada para estudantes do <strong>IFRN</strong>. Nosso objetivo é fornecer recursos de alta qualidade para ajudar os alunos a se prepararem para os desafios acadêmicos.</p>
-                            <h2>Recursos Disponíveis</h2>
-
-                        <ul>
-                            <li>🎥 Videoaulas explicativas</li>
-                            <li>📝 Exercícios práticos</li>
-                            <li>📚 Material didático completo</li>
-                            <li>💬 Comunidade ativa para suporte e troca de conhecimentos</li>
-                        </ul>
-                            <h2>Nosso Compromisso</h2>
-                        <p>🎯 Estamos comprometidos em oferecer uma experiência de aprendizado acessível e eficaz, ajudando os alunos a alcançarem seus objetivos acadêmicos.</p>
+                        <p>O <strong>Matec</strong> é uma plataforma inovadora de aprendizado de matemática desenvolvida especialmente para estudantes do <strong>IFRN</strong>. Nossa missão é democratizar o acesso ao conhecimento matemático, fornecendo recursos de alta qualidade que ajudam os alunos a superarem desafios acadêmicos e desenvolverem habilidades essenciais para o futuro.</p>
+                        
+                        <div class="valores-container">
+                            <div class="valor-item">
+                                <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Conhecimento">
+                                <h3>Conhecimento</h3>
+                                <p>Compartilhamos conteúdo de qualidade e atualizado</p>
+                            </div>
+                            <div class="valor-item">
+                                <img src="{{ url_for('static', filename='images/grupo.png') }}" alt="Comunidade">
+                                <h3>Comunidade</h3>
+                                <p>Construímos juntos um ambiente de aprendizado colaborativo</p>
+                            </div>
+                            <div class="valor-item">
+                                <img src="{{ url_for('static', filename='images/elevacao.png') }}" alt="Crescimento">
+                                <h3>Crescimento</h3>
+                                <p>Incentivamos o desenvolvimento contínuo dos estudantes</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="container-colaboradores">
-                    <h1>Nossos Colaboradores</h1>
-                        <div class="colaboradores">
-                        <div class="colaborador">
-                            <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="">
-                            <h4>Eduardo Vinicius</h4>
-                            <p>Uma breve descrição</p>
+
+                <div class="recursos-card">
+                    <div class="recursos-header">
+                        <h2>Recursos Disponíveis</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="recursos-grid">
+                        <div class="recurso-item">
+                            <div class="recurso-icon">
+                                <img src="{{ url_for('static', filename='images/camera-de-video.png') }}" alt="Videoaulas">
+                            </div>
+                            <div class="recurso-content">
+                                <h3>Videoaulas Explicativas</h3>
+                                <p>Conteúdo didático em formato de vídeo para facilitar a compreensão dos conceitos matemáticos.</p>
+                            </div>
                         </div>
-                        <div class="colaborador">
-                            <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="">
-                            <h4>Jose Abilio</h4>
-                            <p>Uma breve descrição</p>
+                        <div class="recurso-item">
+                            <div class="recurso-icon">
+                                <img src="{{ url_for('static', filename='images/tarefa.png') }}" alt="Exercícios">
+                            </div>
+                            <div class="recurso-content">
+                                <h3>Exercícios Práticos</h3>
+                                <p>Atividades interativas para fixação do conteúdo e preparação para avaliações.</p>
+                            </div>
                         </div>
-                        <div class="colaborador">
-                            <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="">
-                            <h4>Maria Luiza</h4>
-                            <p>Uma breve descrição</p>
+                        <div class="recurso-item">
+                            <div class="recurso-icon">
+                                <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Material Didático">
+                            </div>
+                            <div class="recurso-content">
+                                <h3>Material Didático Completo</h3>
+                                <p>Apostilas, resumos e materiais complementares para aprofundamento dos estudos.</p>
+                            </div>
                         </div>
-                        <div class="colaborador">
-                            <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="">
-                            <h4>Lucas Fernando</h4>
-                            <p>Uma breve descrição</p>
+                        <div class="recurso-item">
+                            <div class="recurso-icon">
+                                <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Ferramentas">
+                            </div>
+                            <div class="recurso-content">
+                                <h3>Ferramentas de Cálculo</h3>
+                                <p>Recursos interativos para auxiliar na resolução de problemas matemáticos.</p>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="equipe-section">
+                    <div class="equipe-header">
+                        <h2>Nossa Equipe</h2>
+                        <div class="divider"></div>
+                        <p class="equipe-description">Conheça os colaboradores que tornam o Matec possível</p>
+                    </div>
+                    
+                    <div class="colaboradores">
                         <div class="colaborador">
-                            <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="">
-                            <h4>Weslley Albert</h4>
-                            <p>Uma breve descrição</p>
+                            <div class="colaborador-img">
+                                <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="Eduardo Vinicius">
+                            </div>
+                            <div class="colaborador-info">
+                                <h3>Eduardo Vinicius</h3>
+                                <p class="colaborador-role">Desenvolvedor Full-Stack</p>
+                                <p class="colaborador-desc">Responsável pelo desenvolvimento da plataforma e integração de sistemas.</p>
+                            </div>
                         </div>
+                        
+                        <div class="colaborador">
+                            <div class="colaborador-img">
+                                <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="Jose Abilio">
+                            </div>
+                            <div class="colaborador-info">
+                                <h3>Jose Abilio</h3>
+                                <p class="colaborador-role">Especialista em Conteúdo</p>
+                                <p class="colaborador-desc">Desenvolve materiais didáticos e videoaulas para a plataforma.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="colaborador">
+                            <div class="colaborador-img">
+                                <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="Maria Luiza">
+                            </div>
+                            <div class="colaborador-info">
+                                <h3>Maria Luiza</h3>
+                                <p class="colaborador-role">Designer UX/UI</p>
+                                <p class="colaborador-desc">Responsável pela experiência do usuário e interface da plataforma.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="colaborador">
+                            <div class="colaborador-img">
+                                <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="Lucas Fernando">
+                            </div>
+                            <div class="colaborador-info">
+                                <h3>Lucas Fernando</h3>
+                                <p class="colaborador-role">Coordenador Pedagógico</p>
+                                <p class="colaborador-desc">Supervisiona a qualidade do conteúdo e alinhamento com o currículo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="colaborador">
+                            <div class="colaborador-img">
+                                <img src="{{ url_for('static', filename='images/sem_imagem_avatar.png') }}" alt="Weslley Albert">
+                            </div>
+                            <div class="colaborador-info">
+                                <h3>Weslley Albert</h3>
+                                <p class="colaborador-role">Analista de Dados</p>
+                                <p class="colaborador-desc">Trabalha com análise de desempenho e melhoria contínua da plataforma.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-section">
+                    <div class="contato-header">
+                        <h2>Entre em Contato</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="contato-content">
+                        <p>Tem dúvidas, sugestões ou quer fazer parte do Matec? Entre em contato conosco!</p>
+                        <a href="#" class="btn-contato">Enviar Mensagem</a>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
-  
-
 {% endblock %}
