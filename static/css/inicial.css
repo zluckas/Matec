@@ -6,123 +6,134 @@
     border: 0;
 }
 
-body {
-    height: 100vh;
+:root {
+    --primary-color: #008f5e;
+    --secondary-color: #2c3e50;
+    --light-bg: #eaf7f5;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
 }
 
-.ladingpage{
-    background-color: #eaf7f5;
-    display: flex;
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
 }
-.main {
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--light-bg);
+    padding: 80px 0 40px;
+    margin-top: 60px;
+}
+
+.hero-content {
     display: flex;
-    background-color: #eaf7f5;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 50vw;
-    height: 100vh;
-    margin-top: 60px;
-    border-radius: 16px;
+    min-width: 300px;
 }
 
-.contentmain{
-    display: flex;
-    margin-top: -100px;
-    flex-direction: column;
-    justify-content: center;
-    height: 80%;
-    width: 70%;
-    gap: 20px;
-}
-
-.aprendamat {
-    /* gambiarra */
-    margin-left: 25px;
-}
-
-.aprendamat p {
-    font-family: 'Poppins', sans-serif;  
-    font-size: 60px;
+.aprendamat h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
     line-height: 1.1;
     font-weight: 800;
-    color: #2c3e50;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
 }
 
-#detaquemain {
-    color: #008f5e;
+.aprendamat h1 span {
+    display: block;
+    color: var(--primary-color);
     font-weight: 900;
-    font-size: 75px; 
-    
+    font-size: 3.5rem;
 }
 
 .descricao {
-    margin-top: 16px;
     font-family: "Fjalla One", serif;
-    line-height: 32px;
-    font-size: 21px;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    color: #7f8c8d;
-    margin-bottom: 32px;
-    margin-left: 30px;
-    margin-right: 25px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
 }
 
 .buttons {
     display: flex;
-    justify-content: left;
-    gap: 40px;
-    margin-left: 27px;
-    font-family: "Fjalla One", serif;   
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn {
-    padding: 19px 70px;
-    font-size: 18px;
-    border-radius: 8px;
+    padding: 15px 40px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
     text-decoration: none;
-    font-weight: 100;
+    font-family: "Fjalla One", serif;
+    font-weight: 400;
+    transition: var(--transition);
+    display: inline-block;
 }
 
-.create{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.create >h3,h5{
-    color: white;
-    
-}
-
-.mateco-avatar {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
 }
 
 .mateco-img {
-    max-width: 180px;
+    max-width: 300px;
     height: auto;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+    transition: var(--transition);
+    animation: float 6s ease-in-out infinite;
 }
 
-.mateco-img:hover {
-    transform: scale(1.05) rotate(2deg);
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .green {
-    background-color: #008f5e; 
-    color: white;
+    background-color: var(--primary-color); 
+    color: var(--white);
 }
 
 .white {
-    background-color: white;
-    color: #008f5e;
-    
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .green:hover, .white:hover{
@@ -132,58 +143,75 @@ body {
        
 } 
  
-
-.icones {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    width: 50vw;
-    margin-top: -50px;
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+    background-color: var(--white);
 }
 
-.ico {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: center;
-    gap: 25px; 
-    width: 90%;
-}
-
-.card {
-    background: #ffffff; 
-    width: 300px; 
-    border-radius: 18px;
-    padding-top: 20px;
-    padding-bottom: 20px; 
-    padding-left: 20px; 
-    padding-right: 20px; 
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+.section-title {
     text-align: center;
-    transition: all 0.3s ease; /* Transição mais suave */
-    height: 180px;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+    position: relative;
 }
 
-
-.card:hover {
-    transform: translateY(-5px); /* Efeito de levitação no hover */
-    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais destacada no hover */
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
 }
 
-.card img {
-    width: 45px;
-    margin-top: 20px;
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-
-.card-icon {
-    font-size: 50px; 
-    margin-bottom: 10px; 
+.feature-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
 }
 
-.card-text {
-    font-size: 16px;
-    margin-top: 20px;
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    margin-bottom: 20px;
+}
+
+.feature-icon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 
