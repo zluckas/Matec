@@ -40,7 +40,7 @@ body {
 }
 
 .logo a:hover {
-    color: #15C315;
+    color: #008F5E;
     transition: all 0.1s ease-in-out;
 }
 
@@ -64,7 +64,7 @@ body {
 
 /* Texto de saudação ao usuário */
 #user {
-    color: #15C315;
+    color: #008F5E;
     display: flex;
     align-items: center;
 }
@@ -85,5 +85,5 @@ body {
 
 .botao-sair:hover,
 .botao-extra:hover {
-    border-bottom: 3px solid #15C315 ;
+    border-bottom: 3px solid #008F5E;
 }

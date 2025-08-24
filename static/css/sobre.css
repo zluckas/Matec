@@ -55,7 +55,7 @@ p {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--primary-color);
     color: var(--white);
     padding: 80px 20px;
     text-align: center;
@@ -70,11 +70,9 @@ p {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 
-.highlight {
-    color: #ffeb3b;
-}
 
 .hero-description {
     font-size: 1.2rem;

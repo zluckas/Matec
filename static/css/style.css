@@ -39,11 +39,11 @@ body{
 }
 
 .logo a:hover {
-    color: #15C315;
+    color: #008f5e;
     transition: all 0.2s ease-in-out;
 }
 
-
+/* #15C315 */
 .logo img {
     width: 40px;
 }
@@ -67,7 +67,7 @@ body{
 }
 
 .nav a:hover {
-    border-bottom: 3px solid #15C315 ;
+    border-bottom: 3px solid #008f5e;
 }
 
 
@@ -137,5 +137,5 @@ body{
 .nav .usuario-logado {
     text-decoration: none;
     padding: 4px -10px;
-    color: #15C315;
+    color: #008f5e;
 }
