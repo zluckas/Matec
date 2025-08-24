@@ -73,7 +73,6 @@ p {
     margin-top: 30px;
 }
 
-
 .hero-description {
     font-size: 1.2rem;
     opacity: 0.9;
@@ -364,6 +363,4 @@ p {
     .valor-item {
         min-width: 100%;
     }
-}
-}
 }

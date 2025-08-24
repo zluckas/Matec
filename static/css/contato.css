@@ -54,7 +54,7 @@ p {
 .hero-section {
     background: var(--primary-color);
     color: var(--white);
-    padding: 80px 40px;
+    padding: 80px 20px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -67,7 +67,7 @@ p {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin: 30px;
 }
 
 .hero-description {
@@ -275,6 +275,7 @@ p {
 
 .faq-item h3 {
     font-size: 1.1rem;
+    letter-spacing: 0.3px;
     margin-bottom: 10px;
     color: var(--primary-color);
 }
