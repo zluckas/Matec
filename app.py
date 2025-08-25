@@ -85,19 +85,27 @@ def cadastro():
             flash('Por favor, preencha todos os campos.')
             return redirect(url_for('cadastro'))
 
+        # Validação da idade mínima (10 anos)
+        try:
+            data_nasc = datetime.datetime.strptime(data_nascimento, "%Y-%m-%d").date()
+            hoje = datetime.date.today()
+            idade = hoje.year - data_nasc.year - ((hoje.month, hoje.day) < (data_nasc.month, data_nasc.day))
+            if idade < 10:
+                flash('Você precisa ter pelo menos 10 anos para se cadastrar.')
+                return redirect(url_for('cadastro'))
+        except Exception:
+            flash('Data de nascimento inválida.')
+            return redirect(url_for('cadastro'))
+
         dados = db.session.query(User).filter_by(username=username).first()
 
         # Verifica se usuário já existe
         if dados:
             flash('Usuário já existe! Escolha outro nome.')
-
             return redirect(url_for('cadastro'))
 
         # Gera hash seguro da senha
         senha_hash = generate_password_hash(senha)
-
-        # Formatação da data de forma que o SQLite aceite o formato "YYYY-MM-DD"
-        data_nasc = datetime.datetime.strptime(data_nascimento, "%Y-%m-%d").date()
 
         # definir o usuário a ser salvo
         new_user = User(nome=nome, username=username, email=email, senha=senha_hash, data_nascimento=data_nasc)

@@ -1,42 +1,44 @@
 {% extends 'base2.html' %}
 
-{% block title %}Cadastro Usuarios {% endblock %}
-
+{% block title %}Cadastro{% endblock %}
 
 {% block conteudo %}
+<!-- Importa o CSS de cadastro para estilização -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}" />
 
-<h2>Cadastro</h2>
-
-  <!-- Formulário envia dados via POST para a mesma rota /cadastro -->
-  <form method="POST">
-    <!-- Campo para digitar o nome do usuário -->
-    <label for="email">Email</label>
-    <input type="email" name="email" placeholder="Email" required><br>
-
-    <!-- Campo para o nome completo -->
-    <label for="nome">Nome</label>
-    <input type="text" name="nome" placeholder="Nome completo" required><br>
-
-    <!-- Campo para a senha -->
-    <label for="senha">Senha</label>
-    <input type="password" name="senha" placeholder="Senha" required><br>
-
-    <!-- Campo para o nome completo -->
-    <label for="username">Apelido</label>
-    <input type="text" name="username" placeholder="Apelido" required><br>
-    
-    <!-- Campo para data de nascimento-->
-      <label for="data_nascimento">Data de Nascimento</label>
-    <input type="date" name="data_nascimento" placeholder="Data_nascimento" required><br>
-
-    <!-- Botão para enviar o formulário -->
-    <button type="submit">Cadastrar</button>
-  </form>
-
-  <!-- Link para ir para a página de login -->
-  <p><a href="{{url_for('login')}}">Já tem conta? Faça login</a></p>
-
-  <!-- Aqui pode mostrar mensagens flash do Flask, como erros ou sucesso -->
-{% include 'components/flash_messages.html' %}
+<div class="cadastro-container">
+    <!-- Título do formulário de cadastro -->
+    <div class="cadastro-title">Cadastro</div>
+    <!-- Descrição do formulário -->
+    <p class="cadastro-desc">Crie sua conta para começar a estudar matemática para o IFRN.</p>
+    <!-- Mensagens flash de erro ou sucesso -->
+    {% include 'components/flash_messages.html' %}
+    <!-- Formulário de cadastro -->
+    <form method="POST" class="cadastro-form">
+        <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+            <label for="username">Nome de usuário</label>
+            <input type="text" id="username" name="username" placeholder="Escolha um nome de usuário" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="form-group">
+            <label for="data_nascimento">Data de nascimento</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required>
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Crie uma senha" required>
+        </div>
+        <!-- Botão de envio do formulário -->
+        <button type="submit" class="cadastro-btn">Cadastrar</button>
+    </form>
+    <!-- Link para a página de login -->
+    <a href="{{ url_for('login') }}" class="cadastro-link">Já tem conta? Faça login</a>
+</div>
 {% endblock %}

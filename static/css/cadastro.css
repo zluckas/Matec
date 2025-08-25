@@ -1,93 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fjalla+One&family=Playwrite+VN:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Fjalla+One&display=swap');
 
+:root {
+    --primary-color: #008f5e;
+    --secondary-color: #2c3e50;
+    --light-bg: #eaf7f5;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
 
-/* Estilo básico para o formulário de cadastro */
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 body {
-    background-color:  #eaf7f5 ;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.cadastro-container {
+    background: var(--white);
+    max-width: 420px;
+    margin: 100px auto 0 auto;
+    padding: 40px 32px 32px 32px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
 }
 
-form {
-
-    width: 400px;
-    margin: 25px auto; /* centralizado com margem superior para não ficar atrás da navbar */
-    background-color: #f9f9f9;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-family: 'Fjalla One', sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: black
-}
-
-form input[type="email"],
-form input[type="text"],
-form input[type="password"],
-form input[type="date"] {
-    width: 100%;
-    padding: 10px 12px;
+.cadastro-title {
+    font-family: 'Fjalla One', serif;
+    font-size: 2rem;
+    color: var(--secondary-color);
     margin-bottom: 18px;
-    border: 1.5px solid #ccc;
-    border-radius: 5px;
-    font-size: 15px;
-    transition: border-color 0.3s ease;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
 }
 
-form input[type="email"]:focus,
-form input[type="text"]:focus,
-form input[type="password"]:focus,
-form input[type="date"]:focus {
-    border-color: #15C315; 
+.cadastro-title:after {
+    content: '';
+    display: block;
+    margin: 12px auto 0 auto;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.cadastro-desc {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 28px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cadastro-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.cadastro-form label {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cadastro-form input,
+.cadastro-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--border-radius);
+    border: 1px solid #dbe9e6;
+    background: var(--light-bg);
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.2s;
     outline: none;
 }
 
-form button {
-    width: 100%;
-    background-color: #15C315;
-    color: white;
+.cadastro-form input:focus,
+.cadastro-form select:focus {
+    border-color: var(--primary-color);
+    background: #f6fffa;
+}
+
+.cadastro-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cadastro-btn {
+    padding: 15px 40px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-family: "Fjalla One", serif;
+    font-weight: 400;
+    transition: var(--transition);
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
-    padding: 12px 0;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     margin-top: 10px;
 }
 
-form button:hover {
-    background-color: #0f9b0f;
+.cadastro-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
-p {
+.cadastro-link {
+    display: block;
     text-align: center;
-    font-family: 'Fjalla One', sans-serif;
-}
-
-p a {
-    color: #15C315;
+    margin-top: 18px;
+    color: var(--primary-color);
     text-decoration: none;
-    
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.2s;
 }
 
-p a:hover {
+.cadastro-link:hover {
+    color: var(--primary-color);
     text-decoration: underline;
 }
-h2 {
-    margin-top:90px ;
+
+/* Mensagens de erro ou sucesso */
+.cadastro-msg {
+    margin-bottom: 16px;
     text-align: center;
-    font-size: 30px;
-    font-family: 'Fjalla One', sans-serif;
- 
+    font-size: 1rem;
+    color: #d32f2f;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .cadastro-container {
+        padding: 24px 8px 18px 8px;
+        max-width: 98vw;
+    }
+    .cadastro-title {
+        font-size: 1.4rem;
+    }
 }

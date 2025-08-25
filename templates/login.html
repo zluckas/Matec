@@ -1,27 +1,25 @@
 {% extends 'base2.html' %}
 
-{% block title %}Cadastro Usuarios {% endblock %}
-
+{% block title %}Login{% endblock %}
 
 {% block conteudo %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}" />
-<h2>Login</h2>
-  <!-- Formulário envia dados via POST para a mesma rota /login -->
-  <form method="POST">
-    <!-- Campo usuário -->
-     <label for="email">Email</label>
-    <input type="email" name="email" placeholder="Email" required><br>
-     <label for="senha">Senha</label>
-    <!-- Campo senha -->
-    <input type="password" name="senha" placeholder="Senha" required><br>
 
-    <!-- Botão para enviar -->
-    <button type="submit">Entrar</button>
-  </form>
-
-  <!-- Link para ir para cadastro -->
-  <p><a href="{{url_for('cadastro')}}">Não tem conta? Cadastre-se</a></p>
-
-  <!-- Mostra mensagens flash (erros, alertas, etc) usa o flash no app-->
-{% include 'components/flash_messages.html' %}
+<div class="cadastro-container">
+    <div class="cadastro-title">Login</div>
+    <p class="cadastro-desc">Acesse sua conta para continuar estudando matemática para o IFRN.</p>
+    {% include 'components/flash_messages.html' %}
+    <form method="POST" class="cadastro-form">
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" placeholder="Digite sua senha" required>
+        </div>
+        <button type="submit" class="cadastro-btn">Entrar</button>
+    </form>
+    <a href="{{ url_for('cadastro') }}" class="cadastro-link">Não tem conta? Cadastre-se</a>
+</div>
 {% endblock %}

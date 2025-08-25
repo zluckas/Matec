@@ -2,11 +2,8 @@
 
 {% block title %}Conteúdos{% endblock %}
 
-{% block css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/conteudos.css') }}">
-{% endblock %}
-
-{% block content %}
+{% block conteudo %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/conteudos.css') }}">
 <div class="container">
     <div class="content">
         <div class="texto-init">
@@ -18,55 +15,55 @@
                 <img src="{{ url_for('static', filename='images/icones/fracoes.png') }}" alt="Frações">
                 <h2>Frações</h2>
                 <h3>Aprenda sobre frações e suas operações</h3>
-                <a href="{{ url_for('fracoes') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-2">
                 <img src="{{ url_for('static', filename='images/icones/proporcoes.png') }}" alt="Proporções">
                 <h2>Proporções</h2>
                 <h3>Entenda o conceito de proporção e suas aplicações</h3>
-                <a href="{{ url_for('proporcoes') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-3">
                 <img src="{{ url_for('static', filename='images/icones/regra-de-tres.png') }}" alt="Regra de três">
                 <h2>Regra de três</h2>
                 <h3>Aprenda a resolver problemas com regra de três</h3>
-                <a href="{{ url_for('regra_de_tres') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-4">
                 <img src="{{ url_for('static', filename='images/icones/porcentagem.png') }}" alt="Porcentagem">
                 <h2>Porcentagem</h2>
                 <h3>Entenda o conceito de porcentagem e suas aplicações</h3>
-                <a href="{{ url_for('porcentagem') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-5">
                 <img src="{{ url_for('static', filename='images/icones/juros-simples.png') }}" alt="Juros simples">
                 <h2>Juros simples</h2>
                 <h3>Aprenda a calcular juros simples</h3>
-                <a href="{{ url_for('juros_simples') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-6">
                 <img src="{{ url_for('static', filename='images/icones/juros-compostos.png') }}" alt="Juros compostos">
                 <h2>Juros compostos</h2>
                 <h3>Entenda o conceito de juros compostos</h3>
-                <a href="{{ url_for('juros_compostos') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-7">
                 <img src="{{ url_for('static', filename='images/icones/estatistica.png') }}" alt="Estatística">
                 <h2>Estatística</h2>
                 <h3>Aprenda conceitos básicos de estatística</h3>
-                <a href="{{ url_for('estatistica') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-8">
                 <img src="{{ url_for('static', filename='images/icones/geometria.png') }}" alt="Geometria">
                 <h2>Geometria</h2>
                 <h3>Estude os principais conceitos de geometria</h3>
-                <a href="{{ url_for('geometria') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
             <div class="box-9">
                 <img src="{{ url_for('static', filename='images/icones/algebra.png') }}" alt="Álgebra">
                 <h2>Álgebra</h2>
                 <h3>Aprenda os fundamentos da álgebra</h3>
-                <a href="{{ url_for('algebra') }}" class="btn">Estudar agora</a>
+                <a href="#" class="btn">Estudar agora</a>
             </div>
         </div>
     </div>

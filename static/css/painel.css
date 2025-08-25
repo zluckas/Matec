@@ -1,3 +1,4 @@
+/* Importa fontes e define variáveis iguais à landing page */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Fjalla+One&display=swap');
 
 :root {
@@ -7,8 +8,8 @@
     --text-color: #333;
     --text-light: #7f8c8d;
     --white: #ffffff;
-    --border-radius: 12px;
-    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
@@ -21,16 +22,17 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; 
-    overflow-y: scroll;
     background-color: var(--light-bg);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
 .container {
+    
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 50px 20px;
 }
 
 .texto-init {
@@ -43,7 +45,8 @@ body {
     font-size: 2.5rem;
     font-weight: 800;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
     position: relative;
     display: inline-block;
 }
@@ -61,12 +64,13 @@ body {
 }
 
 .texto-init p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
+    font-family: "Fjalla One", serif;
 }
-    
+
 .content {
     display: flex;
     flex-direction: column;
@@ -112,66 +116,80 @@ body {
 }
 
 .box-1 h2, .box-2 h2, .box-3 h2, .box-4 h2 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
     color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .box-1 h3, .box-2 h3, .box-3 h3, .box-4 h3 {
     font-size: 1rem;
     color: var(--text-light);
-    margin-bottom: 30px;
-    line-height: 1.4;
+    margin-bottom: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
-.btn-card {
+/* Botão igual ao "Começar Agora" da landing page */
+.box-1 h4 a,
+.box-2 h4 a,
+.box-3 h4 a,
+.box-4 h4 a {
+    padding: 15px 40px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-family: "Fjalla One", serif;
+    font-weight: 400;
+    transition: var(--transition);
     display: inline-block;
     background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
 }
 
-.btn-card:hover {
-    background-color: #006e48;
+.box-1 h4 a:hover,
+.box-2 h4 a:hover,
+.box-3 h4 a:hover,
+.box-4 h4 a:hover {
+    box-shadow: var(--shadow);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 143, 94, 0.3);
+    background-color: #006e48;
+    color: var(--white);
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .boxs {
         flex-direction: column;
         align-items: center;
+        gap: 32px;
     }
-    
+    .box-1, .box-2, .box-3, .box-4 {
+        width: 90vw;
+        max-width: 350px;
+        height: 320px;
+    }
+    .container {
+        padding: 0 8px;
+    }
+}
+
+@media (max-width: 600px) {
     .texto-init h1 {
         font-size: 2rem;
     }
-    
-    .texto-init p {
-        font-size: 1rem;
+    .box-1, .box-2, .box-3, .box-4 {
+        height: 260px;
+        width: 98vw;
+        max-width: 98vw;
     }
-}
-
-.box-1 h4,.box-2 h4,.box-3 h4,.box-4 h4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 15px;
-    height: 50px;
-    width: 180px;
-    background-color:#008f5e;
-    border-radius: 8px;
-    letter-spacing: 0.9px;
-}
-
-[class^="box"] h4 a {
-  text-decoration: none;
-  color: inherit; 
+    .box-1 img, .box-2 img, .box-3 img, .box-4 img {
+        width: 44px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
