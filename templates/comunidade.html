@@ -4,318 +4,236 @@
 
 {% block conteudo %}
 <div class="community-container">
-    <!-- Hero Section -->
-    <section class="community-hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Comunidade Matec</h1>
-            <p class="hero-subtitle">Conecte-se, colabore e cresça junto com milhares de estudantes</p>
-            <div class="community-stats">
-                <div class="stat-item">
-                    <span class="stat-number">1,247</span>
-                    <span class="stat-label">Estudantes</span>
+    <div class="community-header">
+        <h1>Comunidade Matec</h1>
+        <p>Conecte-se, colabore e cresça junto com outros estudantes</p>
+    </div>
+
+    <div class="community-content">
+        <!-- Forum Section -->
+        <div class="community-section">
+            <div class="section-header">
+                <h2>Fórum de Discussões</h2>
+                <p>Tire dúvidas e compartilhe conhecimento</p>
+            </div>
+            <div class="topics-list">
+                <div class="topic-item">
+                    <span class="topic-category">Frações</span>
+                    <h3>Como resolver frações com denominadores diferentes?</h3>
+                    <p class="topic-meta">Por Maria • há 2h • 5 respostas</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">89</span>
-                    <span class="stat-label">Grupos Ativos</span>
+                <div class="topic-item">
+                    <span class="topic-category">IFRN</span>
+                    <h3>Dicas para a prova de matemática do IFRN 2024</h3>
+                    <p class="topic-meta">Por João • há 4h • 12 respostas</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">2,156</span>
-                    <span class="stat-label">Discussões</span>
+                <div class="topic-item">
+                    <span class="topic-category">Geral</span>
+                    <h3>Métodos de estudo mais eficazes</h3>
+                    <p class="topic-meta">Por Ana • há 6h • 8 respostas</p>
+                </div>
+            </div>
+            <div class="section-action">
+                <a href="#" class="btn-primary">Ver Todas as Discussões</a>
+                <a href="#" class="btn-secondary">Nova Discussão</a>
+            </div>
+        </div>
+
+        <!-- Study Groups -->
+        <div class="community-section">
+            <div class="section-header">
+                <h2>Grupos de Estudo</h2>
+                <p>Participe de grupos colaborativos</p>
+            </div>
+            <div class="groups-list">
+                <div class="group-item">
+                    <div class="group-info">
+                        <h3>Matemática IFRN 2024</h3>
+                        <p>Preparação focada no exame do IFRN</p>
+                        <span class="group-stats">24 membros • Ativo agora</span>
+                    </div>
+                    <a href="#" class="btn-join">Participar</a>
+                </div>
+                <div class="group-item">
+                    <div class="group-info">
+                        <h3>Frações & Proporções</h3>
+                        <p>Dominando frações e proporções</p>
+                        <span class="group-stats">18 membros • Ativo há 1h</span>
+                    </div>
+                    <a href="#" class="btn-join">Participar</a>
+                </div>
+                <div class="group-item">
+                    <div class="group-info">
+                        <h3>Resolução de Exercícios</h3>
+                        <p>Resolvemos exercícios em conjunto</p>
+                        <span class="group-stats">31 membros • Ativo há 30min</span>
+                    </div>
+                    <a href="#" class="btn-join">Participar</a>
+                </div>
+            </div>
+            <div class="section-action">
+                <a href="#" class="btn-primary">Ver Todos os Grupos</a>
+            </div>
+        </div>
+
+        <!-- Community Tools -->
+        <div class="community-section">
+            <div class="section-header">
+                <h2>Ferramentas da Comunidade</h2>
+                <p>Recursos para melhorar sua experiência de estudo</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Ranking</h3>
+                    <p>Veja os estudantes mais ativos da comunidade</p>
+                    <div class="tool-stats">
+                        <span>1º Carlos - 1,250 pts</span>
+                        <span>2º Ana - 980 pts</span>
+                    </div>
+                    <a href="#" class="btn-tool">Ver Ranking</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Chat</h3>
+                    <p>Converse em tempo real com outros estudantes</p>
+                    <div class="tool-stats">
+                        <span>47 estudantes online</span>
+                    </div>
+                    <a href="#" class="btn-tool">Entrar no Chat</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Mentoria</h3>
+                    <p>Receba orientação personalizada</p>
+                    <div class="tool-stats">
+                        <span>8 mentores disponíveis</span>
+                    </div>
+                    <a href="#" class="btn-tool">Solicitar Mentoria</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Desafios</h3>
+                    <p>Resolva desafios semanais</p>
+                    <div class="tool-stats">
+                        <span>Atual: Frações Complexas</span>
+                    </div>
+                    <a href="#" class="btn-tool">Participar</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Main Features -->
-    <section class="community-features">
-        <div class="features-container">
-            <!-- Forum Section -->
-            <div class="feature-section forum-section">
-                <div class="section-header">
-                    <div class="section-icon">💬</div>
-                    <div class="section-info">
-                        <h2>Fórum de Discussões</h2>
-                        <p>Tire dúvidas, compartilhe conhecimento e ajude outros estudantes</p>
-                    </div>
-                    <button class="section-btn" onclick="openForumModal()">Participar</button>
-                </div>
-                <div class="recent-topics">
-                    <div class="topic-item">
-                        <span class="topic-tag">Frações</span>
-                        <span class="topic-title">Como resolver frações com denominadores diferentes?</span>
-                        <span class="topic-meta">Por Maria • há 2h • 5 respostas</span>
-                    </div>
-                    <div class="topic-item">
-                        <span class="topic-tag">IFRN</span>
-                        <span class="topic-title">Dicas para a prova de matemática do IFRN 2024</span>
-                        <span class="topic-meta">Por João • há 4h • 12 respostas</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Study Groups -->
-            <div class="feature-section groups-section">
-                <div class="section-header">
-                    <div class="section-icon">👥</div>
-                    <div class="section-info">
-                        <h2>Grupos de Estudo</h2>
-                        <p>Junte-se a grupos colaborativos e estude em equipe</p>
-                    </div>
-                    <button class="section-btn" onclick="openGroupsModal()">Explorar</button>
-                </div>
-                <div class="groups-grid">
-                    <div class="group-card">
-                        <div class="group-header">
-                            <span class="group-name">Matemática IFRN 2024</span>
-                            <span class="group-members">24 membros</span>
-                        </div>
-                        <p class="group-desc">Preparação focada no exame do IFRN</p>
-                        <span class="group-activity">Ativo agora</span>
-                    </div>
-                    <div class="group-card">
-                        <div class="group-header">
-                            <span class="group-name">Frações & Proporções</span>
-                            <span class="group-members">18 membros</span>
-                        </div>
-                        <p class="group-desc">Dominando frações e proporções</p>
-                        <span class="group-activity">Ativo há 1h</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Community Tools -->
-            <div class="community-tools">
-                <div class="tool-item ranking-tool">
-                    <div class="tool-icon">🏆</div>
-                    <div class="tool-content">
-                        <h3>Ranking</h3>
-                        <p>Veja os estudantes mais ativos</p>
-                        <div class="top-users">
-                            <span class="user-badge">1º Carlos - 1,250 pts</span>
-                            <span class="user-badge">2º Ana - 980 pts</span>
-                        </div>
-                    </div>
-                    <button class="tool-btn" onclick="openRankingModal()">Ver Mais</button>
-                </div>
-
-                <div class="tool-item chat-tool">
-                    <div class="tool-icon">💭</div>
-                    <div class="tool-content">
-                        <h3>Chat ao Vivo</h3>
-                        <p>Converse em tempo real</p>
-                        <div class="online-status">
-                            <span class="online-dot"></span>
-                            <span>47 estudantes online</span>
-                        </div>
-                    </div>
-                    <button class="tool-btn" onclick="openChatModal()">Entrar</button>
-                </div>
-
-                <div class="tool-item mentoring-tool">
-                    <div class="tool-icon">🎓</div>
-                    <div class="tool-content">
-                        <h3>Mentoria</h3>
-                        <p>Receba orientação personalizada</p>
-                        <div class="mentors-available">
-                            <span>8 mentores disponíveis</span>
-                        </div>
-                    </div>
-                    <button class="tool-btn" onclick="openMentoringModal()">Solicitar</button>
-                </div>
-
-                <div class="tool-item challenges-tool">
-                    <div class="tool-icon">⚡</div>
-                    <div class="tool-content">
-                        <h3>Desafios</h3>
-                        <p>Resolva desafios semanais</p>
-                        <div class="challenge-info">
-                            <span>Desafio atual: Frações Complexas</span>
-                        </div>
-                    </div>
-                    <button class="tool-btn" onclick="openChallengesModal()">Participar</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 </div>
 
 <style>
 /* Community-specific styles - maintaining site consistency */
 .community-container {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
     font-family: 'Poppins', sans-serif;
 }
 
-.community-hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #006b47 100%);
-    color: white;
-    padding: 80px 20px 60px;
+.community-header {
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 50px;
 }
 
-.community-hero::before {
+.community-header h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.community-header h1:after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-    animation: float 20s infinite linear;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-100px); }
-}
-
-.hero-content {
-    max-width: 800px;
+.community-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
+    font-family: "Fjalla One", serif;
 }
 
-.hero-title {
-    font-family: 'Fjalla One', serif;
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
-
-.community-stats {
+.community-content {
     display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-top: 40px;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-family: 'Fjalla One', serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-.community-features {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.feature-section {
+.community-section {
     background: white;
-    border-radius: 20px;
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0, 143, 94, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 143, 94, 0.1);
     border: 1px solid rgba(0, 143, 94, 0.1);
 }
 
 .section-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-.section-icon {
-    font-size: 3rem;
-    min-width: 80px;
-    text-align: center;
-}
-
-.section-info {
-    flex: 1;
-}
-
-.section-info h2 {
+.section-header h2 {
     font-family: 'Fjalla One', serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--secondary-color);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     letter-spacing: 1px;
 }
 
-.section-info p {
+.section-header p {
     color: var(--text-light);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-.section-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    font-family: 'Fjalla One', serif;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-}
-
-.section-btn:hover {
-    background: #006b47;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 143, 94, 0.3);
-}
-
-.recent-topics {
+/* Forum Styles */
+.topics-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-bottom: 25px;
 }
 
 .topic-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
     padding: 20px;
     background: var(--light-bg);
-    border-radius: 12px;
+    border-radius: 8px;
     border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;
 }
 
 .topic-item:hover {
     transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 143, 94, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 143, 94, 0.1);
 }
 
-.topic-tag {
+.topic-category {
     background: var(--primary-color);
     color: white;
     padding: 4px 12px;
-    border-radius: 15px;
+    border-radius: 12px;
     font-size: 0.8rem;
     font-weight: 600;
-    width: fit-content;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
-.topic-title {
-    font-weight: 600;
+.topic-item h3 {
     color: var(--secondary-color);
     font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .topic-meta {
@@ -323,943 +241,12 @@
     font-size: 0.9rem;
 }
 
-.groups-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.group-card {
-    background: var(--light-bg);
-    padding: 25px;
-    border-radius: 15px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.group-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 143, 94, 0.15);
-}
-
-.group-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.group-name {
-    font-weight: 600;
-    color: var(--secondary-color);
-    font-size: 1.1rem;
-}
-
-.group-members {
-    background: var(--primary-color);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-}
-
-.group-desc {
-    color: var(--text-light);
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-.group-activity {
-    color: var(--primary-color);
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.community-tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.tool-item {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 143, 94, 0.1);
-    border: 1px solid rgba(0, 143, 94, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.tool-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 143, 94, 0.15);
-}
-
-.tool-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.tool-content h3 {
-    font-family: 'Fjalla One', serif;
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.tool-content p {
-    color: var(--text-light);
-    margin-bottom: 15px;
-}
-
-.tool-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: auto;
-}
-
-.tool-btn:hover {
-    background: #006b47;
-    transform: translateY(-2px);
-}
-
-.top-users {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.user-badge {
-    background: var(--light-bg);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-.online-status {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-.online-dot {
-    width: 8px;
-    height: 8px;
-    background: #4CAF50;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-
-.mentors-available {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-.challenge-info {
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .community-stats {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .section-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .feature-section {
-        padding: 25px;
-    }
-    
-    .community-tools {
-        grid-template-columns: 1fr;
-    }
-    
-    .groups-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-
-<!-- Modals -->
-<!-- Forum Modal -->
-<div id="forumModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Fórum de Discussões</h2>
-            <span class="close" onclick="closeModal('forumModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <div class="forum-actions">
-                <button onclick="openNewTopicModal()" class="section-btn">+ Nova Discussão</button>
-            </div>
-            <div class="topics-list">
-                <div class="topic-card" onclick="viewTopic(1)">
-                    <div class="topic-header">
-                        <span class="topic-tag">Frações</span>
-                        <span class="topic-time">há 2 horas</span>
-                    </div>
-                    <h4>Como resolver frações com denominadores diferentes?</h4>
-                    <p>Estou com dificuldade para somar frações que têm denominadores diferentes...</p>
-                    <div class="topic-stats">
-                        <span>Por Maria Silva</span>
-                        <span>5 respostas • 23 visualizações</span>
-                    </div>
-                </div>
-                <div class="topic-card" onclick="viewTopic(2)">
-                    <div class="topic-header">
-                        <span class="topic-tag">IFRN</span>
-                        <span class="topic-time">há 4 horas</span>
-                    </div>
-                    <h4>Dicas para a prova de matemática do IFRN 2024</h4>
-                    <p>Pessoal, alguém que já passou no IFRN pode dar dicas sobre como estudar...</p>
-                    <div class="topic-stats">
-                        <span>Por João Santos</span>
-                        <span>12 respostas • 89 visualizações</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Groups Modal -->
-<div id="groupsModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Grupos de Estudo</h2>
-            <span class="close" onclick="closeModal('groupsModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <div class="groups-list">
-                <div class="group-item">
-                    <div class="group-info">
-                        <h4>Matemática IFRN 2024</h4>
-                        <p>Preparação focada no exame do IFRN com exercícios e simulados</p>
-                        <div class="group-meta">
-                            <span>24 membros</span>
-                            <span>Ativo agora</span>
-                        </div>
-                    </div>
-                    <button onclick="joinGroup('Matemática IFRN 2024')" class="join-btn">Participar</button>
-                </div>
-                <div class="group-item">
-                    <div class="group-info">
-                        <h4>Frações & Proporções</h4>
-                        <p>Dominando frações, proporções e regra de três</p>
-                        <div class="group-meta">
-                            <span>18 membros</span>
-                            <span>Ativo há 1h</span>
-                        </div>
-                    </div>
-                    <button onclick="joinGroup('Frações & Proporções')" class="join-btn">Participar</button>
-                </div>
-                <div class="group-item">
-                    <div class="group-info">
-                        <h4>Resolução de Exercícios</h4>
-                        <p>Resolvemos exercícios em conjunto e compartilhamos métodos</p>
-                        <div class="group-meta">
-                            <span>31 membros</span>
-                            <span>Ativo há 30min</span>
-                        </div>
-                    </div>
-                    <button onclick="joinGroup('Resolução de Exercícios')" class="join-btn">Participar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Ranking Modal -->
-<div id="rankingModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Ranking da Comunidade</h2>
-            <span class="close" onclick="closeModal('rankingModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <div class="ranking-tabs">
-                <button class="tab-btn active" onclick="switchRankingTab('pontos')">Pontos</button>
-                <button class="tab-btn" onclick="switchRankingTab('perguntas')">Perguntas</button>
-                <button class="tab-btn" onclick="switchRankingTab('respostas')">Respostas</button>
-            </div>
-            <div class="ranking-list">
-                <div class="rank-item">
-                    <span class="position">1º</span>
-                    <div class="user-info">
-                        <span class="username">Carlos Lima</span>
-                        <span class="user-points">1,250 pontos</span>
-                    </div>
-                    <div class="rank-badge gold">🏆</div>
-                </div>
-                <div class="rank-item">
-                    <span class="position">2º</span>
-                    <div class="user-info">
-                        <span class="username">Ana Costa</span>
-                        <span class="user-points">980 pontos</span>
-                    </div>
-                    <div class="rank-badge silver">🥈</div>
-                </div>
-                <div class="rank-item">
-                    <span class="position">3º</span>
-                    <div class="user-info">
-                        <span class="username">Pedro Alves</span>
-                        <span class="user-points">875 pontos</span>
-                    </div>
-                    <div class="rank-badge bronze">🥉</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Chat Modal -->
-<div id="chatModal" class="modal">
-    <div class="modal-content chat-modal">
-        <div class="modal-header">
-            <h2>Chat ao Vivo</h2>
-            <div class="online-users">47 online</div>
-            <span class="close" onclick="closeModal('chatModal')">&times;</span>
-        </div>
-        <div class="chat-container">
-            <div class="chat-messages">
-                <div class="message">
-                    <span class="message-user">Maria:</span>
-                    <span class="message-text">Alguém pode me ajudar com esta questão de frações?</span>
-                    <span class="message-time">14:20</span>
-                </div>
-                <div class="message">
-                    <span class="message-user">João:</span>
-                    <span class="message-text">Claro! Qual é a dúvida?</span>
-                    <span class="message-time">14:21</span>
-                </div>
-                <div class="message">
-                    <span class="message-user">Ana:</span>
-                    <span class="message-text">Estou estudando para o IFRN também, vamos formar um grupo?</span>
-                    <span class="message-time">14:22</span>
-                </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" placeholder="Digite sua mensagem..." id="chatInput">
-                <button onclick="sendMessage()" class="send-btn">Enviar</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Mentoring Modal -->
-<div id="mentoringModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Mentoria Online</h2>
-            <span class="close" onclick="closeModal('mentoringModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <div class="mentors-grid">
-                <div class="mentor-card">
-                    <div class="mentor-avatar">👨‍🎓</div>
-                    <div class="mentor-info">
-                        <h4>Prof. Carlos</h4>
-                        <p>Especialista em Frações e Proporções</p>
-                        <div class="mentor-rating">⭐⭐⭐⭐⭐ (4.9)</div>
-                        <div class="mentor-status available">Disponível</div>
-                    </div>
-                    <button onclick="requestMentoring('Prof. Carlos')" class="mentor-btn">Solicitar</button>
-                </div>
-                <div class="mentor-card">
-                    <div class="mentor-avatar">👩‍🎓</div>
-                    <div class="mentor-info">
-                        <h4>Ana Silva</h4>
-                        <p>Aprovada IFRN 2023 - Matemática</p>
-                        <div class="mentor-rating">⭐⭐⭐⭐⭐ (4.8)</div>
-                        <div class="mentor-status busy">Ocupado</div>
-                    </div>
-                    <button onclick="requestMentoring('Ana Silva')" class="mentor-btn" disabled>Indisponível</button>
-                </div>
-                <div class="mentor-card">
-                    <div class="mentor-avatar">👨‍🎓</div>
-                    <div class="mentor-info">
-                        <h4>João Santos</h4>
-                        <p>Monitor de Matemática Básica</p>
-                        <div class="mentor-rating">⭐⭐⭐⭐ (4.7)</div>
-                        <div class="mentor-status available">Disponível</div>
-                    </div>
-                    <button onclick="requestMentoring('João Santos')" class="mentor-btn">Solicitar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Challenges Modal -->
-<div id="challengesModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Desafios Matemáticos</h2>
-            <span class="close" onclick="closeModal('challengesModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <div class="current-challenge">
-                <h3>Desafio da Semana</h3>
-                <div class="challenge-card active">
-                    <h4>⚡ Frações Complexas</h4>
-                    <p>Resolva 5 exercícios de frações com denominadores diferentes em menos de 10 minutos</p>
-                    <div class="challenge-reward">🏆 Recompensa: 50 pontos</div>
-                    <div class="challenge-participants">127 participantes</div>
-                    <button onclick="startChallenge('fracoes-complexas')" class="challenge-btn">Iniciar Desafio</button>
-                </div>
-            </div>
-            <div class="upcoming-challenges">
-                <h3>Próximos Desafios</h3>
-                <div class="challenge-card upcoming">
-                    <h4>📊 Proporções Rápidas</h4>
-                    <p>Desafio de regra de três e proporções</p>
-                    <div class="challenge-date">Disponível em 3 dias</div>
-                </div>
-                <div class="challenge-card upcoming">
-                    <h4>🎯 IFRN Simulado</h4>
-                    <p>Simulado completo estilo IFRN</p>
-                    <div class="challenge-date">Disponível em 1 semana</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- New Topic Modal -->
-<div id="newTopicModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Nova Discussão</h2>
-            <span class="close" onclick="closeModal('newTopicModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <form id="newTopicForm">
-                <div class="form-group">
-                    <label for="topicTitle">Título da Discussão:</label>
-                    <input type="text" id="topicTitle" placeholder="Digite o título da sua discussão" required>
-                </div>
-                <div class="form-group">
-                    <label for="topicCategory">Categoria:</label>
-                    <select id="topicCategory" required>
-                        <option value="">Selecione uma categoria</option>
-                        <option value="fracoes">Frações</option>
-                        <option value="ifrn">IFRN</option>
-                        <option value="proporcoes">Proporções</option>
-                        <option value="geral">Geral</option>
-                        <option value="duvidas">Dúvidas</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="topicContent">Conteúdo:</label>
-                    <textarea id="topicContent" rows="6" placeholder="Descreva sua dúvida ou compartilhe seu conhecimento..." required></textarea>
-                </div>
-                <div class="form-actions">
-                    <button type="button" onclick="closeModal('newTopicModal')" class="cancel-btn">Cancelar</button>
-                    <button type="submit" class="submit-btn">Publicar Discussão</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<!-- Topic View Modal -->
-<div id="topicViewModal" class="modal">
-    <div class="modal-content topic-view-modal">
-        <div class="modal-header">
-            <h2 id="topicViewTitle">Visualizar Discussão</h2>
-            <span class="close" onclick="closeModal('topicViewModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <div id="topicViewContent">
-                <!-- Topic content will be loaded here -->
-            </div>
-            <div class="topic-responses">
-                <h3>Respostas</h3>
-                <div id="responsesList">
-                    <!-- Responses will be loaded here -->
-                </div>
-                <div class="new-response">
-                    <h4>Sua Resposta</h4>
-                    <textarea id="newResponseText" rows="4" placeholder="Digite sua resposta..."></textarea>
-                    <button onclick="submitResponse()" class="submit-btn">Enviar Resposta</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-// Modal Functions
-function openForumModal() {
-    document.getElementById('forumModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function openGroupsModal() {
-    document.getElementById('groupsModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function openRankingModal() {
-    document.getElementById('rankingModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function openChatModal() {
-    document.getElementById('chatModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function openMentoringModal() {
-    document.getElementById('mentoringModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function openChallengesModal() {
-    document.getElementById('challengesModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-// Forum Functions
-function openNewTopicModal() {
-    document.getElementById('newTopicModal').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function viewTopic(topicId) {
-    // Sample topic data - in a real app, this would come from a backend
-    const topics = {
-        1: {
-            title: "Como resolver frações com denominadores diferentes?",
-            category: "Frações",
-            author: "Maria Silva",
-            time: "há 2 horas",
-            content: "Estou com dificuldade para somar frações que têm denominadores diferentes. Por exemplo, como somar 1/3 + 1/4? Alguém pode me explicar o passo a passo?",
-            responses: [
-                {
-                    author: "João Santos",
-                    time: "há 1 hora",
-                    content: "Oi Maria! Para somar frações com denominadores diferentes, você precisa encontrar o MMC (Mínimo Múltiplo Comum) dos denominadores. No seu exemplo: MMC(3,4) = 12. Então: 1/3 = 4/12 e 1/4 = 3/12. Somando: 4/12 + 3/12 = 7/12"
-                },
-                {
-                    author: "Ana Costa",
-                    time: "há 45 min",
-                    content: "Excelente explicação, João! Só complementando: sempre verifique se o resultado pode ser simplificado. No caso de 7/12, não dá para simplificar mais porque 7 e 12 não têm divisores comuns além do 1."
-                }
-            ]
-        },
-        2: {
-            title: "Dicas para a prova de matemática do IFRN 2024",
-            category: "IFRN",
-            author: "João Santos",
-            time: "há 4 horas",
-            content: "Pessoal, alguém que já passou no IFRN pode dar dicas sobre como estudar matemática para a prova? Quais são os assuntos que mais caem?",
-            responses: [
-                {
-                    author: "Carlos Lima",
-                    time: "há 3 horas",
-                    content: "Foco em: frações, proporções, regra de três, porcentagem e equações do 1º grau. Esses são os que mais aparecem!"
-                }
-            ]
-        }
-    };
-    
-    const topic = topics[topicId];
-    if (topic) {
-        document.getElementById('topicViewTitle').textContent = topic.title;
-        
-        const content = `
-            <div class="topic-main">
-                <div class="topic-header">
-                    <span class="topic-tag">${topic.category}</span>
-                    <span class="topic-time">${topic.time}</span>
-                </div>
-                <h3>${topic.title}</h3>
-                <p class="topic-content">${topic.content}</p>
-                <div class="topic-author">Por ${topic.author}</div>
-            </div>
-        `;
-        
-        document.getElementById('topicViewContent').innerHTML = content;
-        
-        const responsesList = document.getElementById('responsesList');
-        responsesList.innerHTML = '';
-        
-        topic.responses.forEach(response => {
-            const responseDiv = document.createElement('div');
-            responseDiv.className = 'response-item';
-            responseDiv.innerHTML = `
-                <div class="response-header">
-                    <span class="response-author">${response.author}</span>
-                    <span class="response-time">${response.time}</span>
-                </div>
-                <p class="response-content">${response.content}</p>
-            `;
-            responsesList.appendChild(responseDiv);
-        });
-        
-        document.getElementById('topicViewModal').style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function submitNewTopic() {
-    const title = document.getElementById('topicTitle').value.trim();
-    const category = document.getElementById('topicCategory').value;
-    const content = document.getElementById('topicContent').value.trim();
-    
-    if (title && category && content) {
-        // In a real app, this would send data to backend
-        showNotification('Discussão criada com sucesso! 🎉', 'success');
-        
-        // Reset form
-        document.getElementById('newTopicForm').reset();
-        closeModal('newTopicModal');
-        
-        // Optionally refresh forum modal content
-        setTimeout(() => {
-            closeModal('forumModal');
-            openForumModal();
-        }, 1000);
-    } else {
-        showNotification('Por favor, preencha todos os campos obrigatórios.', 'error');
-    }
-}
-
-function submitResponse() {
-    const responseText = document.getElementById('newResponseText').value.trim();
-    
-    if (responseText) {
-        // In a real app, this would send data to backend
-        const responsesList = document.getElementById('responsesList');
-        const newResponse = document.createElement('div');
-        newResponse.className = 'response-item';
-        newResponse.innerHTML = `
-            <div class="response-header">
-                <span class="response-author">Você</span>
-                <span class="response-time">agora</span>
-            </div>
-            <p class="response-content">${responseText}</p>
-        `;
-        responsesList.appendChild(newResponse);
-        
-        document.getElementById('newResponseText').value = '';
-        showNotification('Resposta enviada com sucesso! 💬', 'success');
-        
-        // Scroll to new response
-        newResponse.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        showNotification('Por favor, digite sua resposta.', 'error');
-    }
-}
-
-// Groups Functions
-function joinGroup(groupName) {
-    alert(`Você se juntou ao grupo "${groupName}"! Funcionalidade completa será implementada em breve.`);
-}
-
-// Ranking Functions
-function switchRankingTab(tabType) {
-    // Remove active class from all tabs
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    // Add active class to clicked tab
-    event.target.classList.add('active');
-    
-    // Here you would load different ranking data based on tabType
-    console.log(`Switching to ${tabType} ranking`);
-}
-
-// Chat Functions
-function sendMessage() {
-    const input = document.getElementById('chatInput');
-    const message = input.value.trim();
-    
-    if (message) {
-        const messagesContainer = document.querySelector('.chat-messages');
-        const newMessage = document.createElement('div');
-        newMessage.className = 'message';
-        newMessage.innerHTML = `
-            <span class="message-user">Você:</span>
-            <span class="message-text">${message}</span>
-            <span class="message-time">${new Date().toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'})}</span>
-        `;
-        messagesContainer.appendChild(newMessage);
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        input.value = '';
-    }
-}
-
-// Mentoring Functions
-function requestMentoring(mentorName) {
-    showNotification(`Solicitação de mentoria enviada para ${mentorName}! 🎓\nVocê receberá uma notificação quando a sessão for confirmada.`, 'success');
-    
-    // Update button state
-    const buttons = document.querySelectorAll('.mentor-btn');
-    buttons.forEach(btn => {
-        if (btn.textContent === 'Solicitar' && btn.onclick.toString().includes(mentorName)) {
-            btn.textContent = 'Solicitado';
-            btn.disabled = true;
-            btn.style.background = '#28a745';
-        }
-    });
-}
-
-// Challenges Functions
-function startChallenge(challengeId) {
-    showNotification(`Iniciando desafio: ${challengeId}! ⚡\nBoa sorte! Você tem 10 minutos para completar.`, 'success');
-    
-    // In a real app, this would redirect to the challenge page
-    setTimeout(() => {
-        showNotification('Redirecionando para a página do desafio...', 'info');
-        closeModal('challengesModal');
-    }, 2000);
-}
-
-// Notification System
-function showNotification(message, type = 'info') {
-    // Remove existing notifications
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-    
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-        <div class="notification-content">
-            <span class="notification-message">${message}</span>
-            <button class="notification-close" onclick="this.parentElement.parentElement.remove()">&times;</button>
-        </div>
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.remove();
-        }
-    }, 5000);
-}
-
-// Close modals when clicking outside
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-}
-
-// Close modals with ESC key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        const modals = document.querySelectorAll('.modal');
-        modals.forEach(modal => {
-            if (modal.style.display === 'block') {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-    }
-});
-
-// Event Listeners
-document.addEventListener('DOMContentLoaded', function() {
-    // Chat input enter key
-    const chatInput = document.getElementById('chatInput');
-    if (chatInput) {
-        chatInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        });
-    }
-    
-    // New topic form submission
-    const newTopicForm = document.getElementById('newTopicForm');
-    if (newTopicForm) {
-        newTopicForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            submitNewTopic();
-        });
-    }
-});
-</script>
-
-<style>
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 5% auto;
-    padding: 0;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    animation: modalSlideIn 0.3s ease;
-}
-
-.modal-content.chat-modal {
-    max-width: 700px;
-    height: 70vh;
-    max-height: 70vh;
-}
-
-@keyframes modalSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    border-bottom: 1px solid #eee;
-    background: linear-gradient(135deg, var(--primary-color), #006b47);
-    color: white;
-    border-radius: 15px 15px 0 0;
-}
-
-.modal-header h2 {
-    margin: 0;
-    font-family: 'Fjalla One', serif;
-    font-size: 1.5rem;
-}
-
-.close {
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.close:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-.modal-body {
-    padding: 30px;
-}
-
-/* Forum Modal Styles */
-.forum-actions {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.topics-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.topic-card {
-    background: var(--light-bg);
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 4px solid var(--primary-color);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.topic-card:hover {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 143, 94, 0.1);
-}
-
-.topic-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.topic-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-/* Groups Modal Styles */
+/* Groups Styles */
 .groups-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
 .group-item {
@@ -1268,605 +255,100 @@ document.addEventListener('DOMContentLoaded', function() {
     align-items: center;
     padding: 20px;
     background: var(--light-bg);
-    border-radius: 12px;
-    border: 2px solid transparent;
+    border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .group-item:hover {
-    border-color: var(--primary-color);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 143, 94, 0.1);
 }
 
-.group-info h4 {
+.group-info h3 {
     color: var(--secondary-color);
-    margin-bottom: 8px;
-}
-
-.group-meta {
-    display: flex;
-    gap: 15px;
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-top: 10px;
-}
-
-.join-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.join-btn:hover {
-    background: #006b47;
-    transform: translateY(-2px);
-}
-
-/* Ranking Modal Styles */
-.ranking-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.tab-btn {
-    padding: 10px 20px;
-    border: 2px solid var(--primary-color);
-    background: transparent;
-    color: var(--primary-color);
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
     font-weight: 600;
 }
 
-.tab-btn.active,
-.tab-btn:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
-.ranking-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.rank-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 15px;
-    background: var(--light-bg);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.rank-item:hover {
-    transform: translateX(5px);
-}
-
-.position {
-    font-family: 'Fjalla One', serif;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    min-width: 40px;
-}
-
-.user-info {
-    flex: 1;
-}
-
-.username {
-    display: block;
-    font-weight: 600;
-    color: var(--secondary-color);
-}
-
-.user-points {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-.rank-badge {
-    font-size: 1.5rem;
-}
-
-/* Chat Modal Styles */
-.online-users {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 5px 12px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-}
-
-.chat-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.chat-messages {
-    flex: 1;
-    max-height: 400px;
-    overflow-y: auto;
-    padding: 20px;
-    background: var(--light-bg);
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.message {
-    margin-bottom: 15px;
-    padding: 10px;
-    background: white;
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.message-user {
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.message-text {
-    flex: 1;
+.group-info p {
     color: var(--text-color);
+    margin-bottom: 5px;
 }
 
-.message-time {
-    font-size: 0.8rem;
+.group-stats {
     color: var(--text-light);
+    font-size: 0.9rem;
 }
 
-.chat-input {
-    display: flex;
-    gap: 10px;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.chat-input input:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.send-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.send-btn:hover {
-    background: #006b47;
-}
-
-/* Mentoring Modal Styles */
-.mentors-grid {
+/* Tools Grid */
+.tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.mentor-card {
+.tool-card {
     background: var(--light-bg);
-    padding: 20px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 8px;
     text-align: center;
-    border: 2px solid transparent;
     transition: all 0.3s ease;
 }
 
-.mentor-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
+.tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 143, 94, 0.1);
 }
 
-.mentor-avatar {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.mentor-info h4 {
+.tool-card h3 {
+    font-family: 'Fjalla One', serif;
     color: var(--secondary-color);
-    margin-bottom: 8px;
-}
-
-.mentor-rating {
-    margin: 10px 0;
-    color: #ffa500;
-}
-
-.mentor-status {
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin: 10px 0;
-}
-
-.mentor-status.available {
-    background: #d4edda;
-    color: #155724;
-}
-
-.mentor-status.busy {
-    background: #f8d7da;
-    color: #721c24;
-}
-
-.mentor-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-}
-
-.mentor-btn:hover:not(:disabled) {
-    background: #006b47;
-}
-
-.mentor-btn:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
-
-/* Challenges Modal Styles */
-.current-challenge {
-    margin-bottom: 30px;
-}
-
-.challenge-card {
-    background: var(--light-bg);
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.challenge-card.active {
-    border-color: var(--primary-color);
-    background: linear-gradient(135deg, #f8fffe, #e8f5f0);
-}
-
-.challenge-card.upcoming {
-    opacity: 0.7;
-}
-
-.challenge-card h4 {
-    color: var(--secondary-color);
+    font-size: 1.3rem;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.challenge-reward {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin: 10px 0;
-}
-
-.challenge-participants {
+.tool-card p {
     color: var(--text-light);
-    font-size: 0.9rem;
     margin-bottom: 15px;
 }
 
-.challenge-date {
-    color: var(--text-light);
-    font-style: italic;
-}
-
-.challenge-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.challenge-btn:hover {
-    background: #006b47;
-    transform: translateY(-2px);
-}
-
-/* New Topic Modal Styles */
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--secondary-color);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.form-actions {
+.tool-stats {
     display: flex;
-    gap: 15px;
-    justify-content: flex-end;
-    margin-top: 30px;
-}
-
-.cancel-btn {
-    background: #6c757d;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.cancel-btn:hover {
-    background: #5a6268;
-}
-
-.submit-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.submit-btn:hover {
-    background: #006b47;
-    transform: translateY(-2px);
-}
-
-/* Topic View Modal Styles */
-.topic-view-modal {
-    max-width: 800px;
-    max-height: 85vh;
-}
-
-.topic-main {
-    background: var(--light-bg);
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-}
-
-.topic-main .topic-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.topic-main h3 {
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    font-family: 'Fjalla One', serif;
-}
-
-.topic-content {
-    line-height: 1.6;
-    color: var(--text-color);
+    flex-direction: column;
+    gap: 5px;
     margin-bottom: 20px;
 }
 
-.topic-author {
-    color: var(--text-light);
-    font-style: italic;
-}
-
-.topic-responses {
-    border-top: 1px solid #eee;
-    padding-top: 30px;
-}
-
-.topic-responses h3 {
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    font-family: 'Fjalla One', serif;
-}
-
-.response-item {
+.tool-stats span {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    border-left: 3px solid var(--primary-color);
-}
-
-.response-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.response-author {
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.response-time {
-    color: var(--text-light);
+    padding: 6px 12px;
+    border-radius: 6px;
     font-size: 0.9rem;
-}
-
-.response-content {
-    line-height: 1.5;
     color: var(--text-color);
 }
 
-.new-response {
-    background: var(--light-bg);
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 25px;
-}
-
-.new-response h4 {
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    font-family: 'Fjalla One', serif;
-}
-
-.new-response textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-family: 'Poppins', sans-serif;
-    resize: vertical;
-    margin-bottom: 15px;
-}
-
-.new-response textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-/* Notification Styles */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 10000;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    animation: slideInRight 0.3s ease;
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.notification-content {
+/* Section action layout */
+.section-action {
     display: flex;
-    align-items: flex-start;
     gap: 15px;
-    padding: 15px 20px;
-}
-
-.notification-message {
-    flex: 1;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    line-height: 1.4;
-    white-space: pre-line;
-}
-
-.notification-close {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.notification-close:hover {
-    opacity: 1;
-}
-
-.notification-success {
-    background: linear-gradient(135deg, #d4edda, #c3e6cb);
-    color: #155724;
-    border-left: 4px solid #28a745;
-}
-
-.notification-error {
-    background: linear-gradient(135deg, #f8d7da, #f1b0b7);
-    color: #721c24;
-    border-left: 4px solid #dc3545;
-}
-
-.notification-info {
-    background: linear-gradient(135deg, #d1ecf1, #bee5eb);
-    color: #0c5460;
-    border-left: 4px solid #17a2b8;
-}
-
-/* Responsive Modal Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
+    .community-header h1 {
+        font-size: 2rem;
     }
     
-    .modal-header {
-        padding: 15px 20px;
+    .community-header p {
+        font-size: 1rem;
     }
     
-    .modal-body {
+    .community-section {
         padding: 20px;
-    }
-    
-    .mentors-grid {
-        grid-template-columns: 1fr;
     }
     
     .group-item {
@@ -1875,18 +357,13 @@ document.addEventListener('DOMContentLoaded', function() {
         gap: 15px;
     }
     
-    .form-actions {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-action {
         flex-direction: column;
-    }
-    
-    .notification {
-        right: 10px;
-        left: 10px;
-        max-width: none;
-    }
-    
-    .topic-view-modal {
-        max-width: 95%;
+        align-items: center;
     }
 }
 </style>

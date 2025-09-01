@@ -15,11 +15,16 @@
         <h2 class="section-title">📹 Videoaulas</h2>
         <div class="video-grid">
             <div class="video-card">
-                <div class="video-thumbnail">▶️</div>
-                <div class="video-info">
-                    <h3 class="video-title">Introdução às Frações - Teoria Completa</h3>
-                    <p class="video-duration">Duração: 25 min</p>
-                </div>
+                <a href="https://youtu.be/kRQW6zYETe0" target="_blank" class="video-link">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/kRQW6zYETe0/hqdefault.jpg" alt="Introdução às Frações - Teoria Completa" class="thumbnail-img" onerror="this.src='https://img.youtube.com/vi/kRQW6zYETe0/mqdefault.jpg'">
+                        <div class="play-button">▶️</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Introdução às Frações - Teoria Completa</h3>
+                        <p class="video-duration">Duração: 25 min</p>
+                    </div>
+                </a>
             </div>
             <div class="video-card">
                 <div class="video-thumbnail">▶️</div>
@@ -149,24 +154,4 @@
         </div>
     </div>
 </div>
-
-<style>
-.section-title {
-    font-size: 2rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.section-title::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background: linear-gradient(90deg, var(--primary-color), transparent);
-    margin-left: 20px;
-}
-</style>
 {% endblock %}
