@@ -1,14 +1,13 @@
 /* Estilos Gerais */
 :root {
     --primary-color: #008f5e;
-    --secondary-color: #00bf7d;
-    --accent-color: #004d31;
+    --secondary-color: #2c3e50;
     --light-bg: #eaf7f5;
+    --text-color: #333;
+    --text-light: #7f8c8d;
     --white: #ffffff;
-    --text-dark: #333333;
-    --text-light: #666666;
-    --border-radius: 12px;
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
@@ -17,7 +16,7 @@ body {
     padding: 0;
     background-color: var(--light-bg);
     font-family: 'Poppins', sans-serif;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .pagina {
@@ -33,7 +32,13 @@ body {
     padding: 20px;
 }
 
-h1, h2, h3, h4 {
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+h2, h3, h4 {
     font-family: "Fjalla One", serif;
     margin: 0;
 }
@@ -41,6 +46,9 @@ h1, h2, h3, h4 {
 p {
     line-height: 1.6;
     margin: 0;
+    font-family: "Fjalla One", serif;
+    font-weight: 100;
+    font-stretch: condensed;
 }
 
 .divider {
@@ -73,6 +81,7 @@ p {
 .hero-description {
     font-size: 1.2rem;
     opacity: 0.9;
+    font-family: "Fjalla One", serif;
 }
 
 /* Main Content */
@@ -122,7 +131,7 @@ p {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: var(--text-dark);
+    color: var(--text-color);
 }
 
 .form-group input,
@@ -160,9 +169,9 @@ p {
 }
 
 .btn-enviar:hover {
-    background-color: var(--accent-color);
+    background-color: #006e48;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
 }
 
 /* Informações de Contato */
