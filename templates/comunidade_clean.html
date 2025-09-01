@@ -1,0 +1,77 @@
+{% extends 'base3.html' %}
+
+{% block title %}Comunidade - Matec{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <div class="content">
+        <div class="texto-init">
+            <h1>Comunidade</h1>
+            <p>Conecte-se com outros estudantes, tire dúvidas e compartilhe conhecimento</p>
+        </div>
+        
+        <div class="content-grid">
+            <!-- Fórum de Dúvidas -->
+            <div class="content-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icones/fracoes.png') }}" alt="Fórum">
+                </div>
+                <h3 class="card-title">Fórum de Dúvidas</h3>
+                <p class="card-description">Tire suas dúvidas e ajude outros estudantes</p>
+                <a href="#" onclick="alert('Fórum em desenvolvimento!')" class="card-button">Acessar Fórum</a>
+            </div>
+            
+            <!-- Grupos de Estudo -->
+            <div class="content-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icones/proporcoes.png') }}" alt="Grupos">
+                </div>
+                <h3 class="card-title">Grupos de Estudo</h3>
+                <p class="card-description">Participe de grupos colaborativos de aprendizado</p>
+                <a href="#" onclick="alert('Grupos de estudo em desenvolvimento!')" class="card-button">Ver Grupos</a>
+            </div>
+            
+            <!-- Ranking da Comunidade -->
+            <div class="content-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icones/regra-de-tres.png') }}" alt="Ranking">
+                </div>
+                <h3 class="card-title">Ranking</h3>
+                <p class="card-description">Veja os estudantes mais ativos da comunidade</p>
+                <a href="#" onclick="alert('Ranking em desenvolvimento!')" class="card-button">Ver Ranking</a>
+            </div>
+            
+            <!-- Chat ao Vivo -->
+            <div class="content-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icones/porcentagem.png') }}" alt="Chat">
+                </div>
+                <h3 class="card-title">Chat ao Vivo</h3>
+                <p class="card-description">Converse em tempo real com outros estudantes</p>
+                <a href="#" onclick="alert('Chat em desenvolvimento!')" class="card-button">Entrar no Chat</a>
+            </div>
+            
+            <!-- Tutoria Online -->
+            <div class="content-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icones/juros-simples.png') }}" alt="Tutoria">
+                </div>
+                <h3 class="card-title">Tutoria Online</h3>
+                <p class="card-description">Agende sessões de tutoria com monitores</p>
+                <a href="#" onclick="alert('Tutoria em desenvolvimento!')" class="card-button">Agendar Tutoria</a>
+            </div>
+            
+            <!-- Desafios Semanais -->
+            <div class="content-card">
+                <div class="card-icon">
+                    <img src="{{ url_for('static', filename='images/icones/juros-compostos.png') }}" alt="Desafios">
+                </div>
+                <h3 class="card-title">Desafios Semanais</h3>
+                <p class="card-description">Participe de desafios e ganhe pontos</p>
+                <a href="#" onclick="alert('Desafios em desenvolvimento!')" class="card-button">Ver Desafios</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -48,6 +48,18 @@ def painel():
 def conteudos():
     return render_template('conteudos.html')
 
+# Rota para a página de frações
+@app.route('/fracao')
+@login_required
+def fracao():
+    return render_template('assutos/fracao.html')
+
+# Rota para a página de comunidade
+@app.route('/comunidade')
+@login_required
+def comunidade():
+    return render_template('comunidade.html')
+
 @app.route('/sobre')
 #@login_required
 def sobre():

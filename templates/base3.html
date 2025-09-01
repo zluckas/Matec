@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Matec - Conteúdos{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                Matec <img src="{{ url_for('static', filename='images/logo_matec.png') }}" alt="" />
+            </a>
+        </div>
+
+        {% include 'components/botoes_nav.html' %}
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include 'partials/footer.html' %}
+</body>
+</html>

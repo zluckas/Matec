@@ -1,0 +1,172 @@
+{% extends 'base3.html' %}
+
+{% block title %}Matec - Frações{% endblock %}
+
+{% block conteudo %}
+<div class="container">
+    <!-- Cabeçalho da página -->
+    <div class="page-header">
+        <h1 class="page-title">Frações</h1>
+        <p class="page-subtitle">Aprenda tudo sobre frações com videoaulas, materiais didáticos e jogos interativos</p>
+    </div>
+
+    <!-- Seção de Videoaulas -->
+    <section class="video-section">
+        <h2 class="section-title">📹 Videoaulas</h2>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-thumbnail">▶️</div>
+                <div class="video-info">
+                    <h3 class="video-title">Introdução às Frações - Teoria Completa</h3>
+                    <p class="video-duration">Duração: 25 min</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">▶️</div>
+                <div class="video-info">
+                    <h3 class="video-title">Resolução: Soma e Subtração de Frações</h3>
+                    <p class="video-duration">Duração: 18 min</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">▶️</div>
+                <div class="video-info">
+                    <h3 class="video-title">Resolução: Multiplicação e Divisão</h3>
+                    <p class="video-duration">Duração: 20 min</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <div class="video-thumbnail">▶️</div>
+                <div class="video-info">
+                    <h3 class="video-title">Resolução: Questões IFRN</h3>
+                    <p class="video-duration">Duração: 22 min</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Materiais Didáticos -->
+    <section class="materials-section">
+        <h2 class="section-title">📚 Materiais Didáticos</h2>
+        <div class="materials-list">
+            <div class="material-item">
+                <div class="material-icon">📄</div>
+                <div class="material-info">
+                    <h3 class="material-title">Apostila Completa de Frações</h3>
+                    <p class="material-description">Material completo com teoria, exemplos e exercícios resolvidos</p>
+                </div>
+                <a href="#" class="material-download">Download PDF</a>
+            </div>
+            <div class="material-item">
+                <div class="material-icon">📊</div>
+                <div class="material-info">
+                    <h3 class="material-title">Lista de Exercícios - Nível Básico</h3>
+                    <p class="material-description">50 exercícios básicos sobre frações com gabarito</p>
+                </div>
+                <a href="#" class="material-download">Download PDF</a>
+            </div>
+            <div class="material-item">
+                <div class="material-icon">📈</div>
+                <div class="material-info">
+                    <h3 class="material-title">Lista de Exercícios - Nível Intermediário</h3>
+                    <p class="material-description">40 exercícios intermediários para aprofundar o conhecimento</p>
+                </div>
+                <a href="#" class="material-download">Download PDF</a>
+            </div>
+            <div class="material-item">
+                <div class="material-icon">🎯</div>
+                <div class="material-info">
+                    <h3 class="material-title">Lista de Exercícios - Nível Avançado</h3>
+                    <p class="material-description">30 exercícios avançados estilo IFRN</p>
+                </div>
+                <a href="#" class="material-download">Download PDF</a>
+            </div>
+            <div class="material-item">
+                <div class="material-icon">📋</div>
+                <div class="material-info">
+                    <h3 class="material-title">Resumo Teórico</h3>
+                    <p class="material-description">Resumo com todas as fórmulas e conceitos importantes</p>
+                </div>
+                <a href="#" class="material-download">Download PDF</a>
+            </div>
+            <div class="material-item">
+                <div class="material-icon">🧮</div>
+                <div class="material-info">
+                    <h3 class="material-title">Tabela de Frações Decimais</h3>
+                    <p class="material-description">Tabela de conversão entre frações e decimais</p>
+                </div>
+                <a href="#" class="material-download">Download PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Jogos -->
+    <section class="games-section">
+        <h2 class="section-title">🎮 Jogos Interativos</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-icon">🍕</div>
+                <h3 class="game-title">Pizza das Frações</h3>
+                <p class="game-description">Aprenda frações dividindo pizzas de forma divertida!</p>
+                <a href="#" class="game-button">Jogar Agora</a>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">🎯</div>
+                <h3 class="game-title">Desafio IFRN</h3>
+                <p class="game-description">Questões no estilo do exame do IFRN</p>
+                <a href="#" class="game-button">Jogar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de recursos adicionais -->
+    <div class="content-grid">
+        <div class="content-card">
+            <div class="card-icon">
+                <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora">
+            </div>
+            <h3 class="card-title">Calculadora de Frações</h3>
+            <p class="card-description">Use nossa calculadora online para verificar seus cálculos com frações</p>
+            <a href="#" class="card-button">Usar Calculadora</a>
+        </div>
+        
+        <div class="content-card">
+            <div class="card-icon">
+                <img src="{{ url_for('static', filename='images/grupo.png') }}" alt="Fórum">
+            </div>
+            <h3 class="card-title">Fórum de Dúvidas</h3>
+            <p class="card-description">Tire suas dúvidas sobre frações com outros estudantes e professores</p>
+            <a href="#" class="card-button">Acessar Fórum</a>
+        </div>
+        
+        <div class="content-card">
+            <div class="card-icon">
+                <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Simulado">
+            </div>
+            <h3 class="card-title">Simulado</h3>
+            <p class="card-description">Teste seus conhecimentos com um simulado completo sobre frações</p>
+            <a href="#" class="card-button">Fazer Simulado</a>
+        </div>
+    </div>
+</div>
+
+<style>
+.section-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    margin-left: 20px;
+}
+</style>
+{% endblock %}
