@@ -68,7 +68,7 @@ body {
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
-    font-family: "Fjalla One", serif;
+     font-family: 'Poppins', sans-serif;
 }
 
 .content {
@@ -83,7 +83,7 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-    font-family: "Fjalla One", serif;
+   font-family: 'Poppins', sans-serif;
 }
 
 .box-1, .box-2, .box-3, .box-4 {
