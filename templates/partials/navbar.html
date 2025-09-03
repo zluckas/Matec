@@ -1,50 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Matec{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <header>
-    <nav aria-label="Menu principal">
-      <div class="navbar">
-        <div class="logo">
-          <a href="{{ url_for('index') }}">
-            Matec <img src="{{ url_for('static', filename='images/logo_matec.png') }}" alt="Logo Matec">
-          </a>
+<header>
+  <nav aria-label="Menu principal">
+    <div class="navbar">
+      <div class="logo">
+        <a href="{{ url_for('index') }}">
+          Matec <img src="{{ url_for('static', filename='images/logo_matec.png') }}" alt="Logo Matec">
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- LINKS E USUÁRIO -->
+      <div class="nav" id="nav-menu">
+        <!-- Links à esquerda -->
+        <div class="nav-links">
+          <a href="{{ url_for('painel') }}">Recursos</a>
+          <a href="{{ url_for('sobre') }}" class="aux">Sobre</a>
+          <a href="{{ url_for('contato') }}">Contato</a>
         </div>
 
-        <!-- LINKS E USUÁRIO -->
-        <div class="nav">
-          <!-- Links à esquerda -->
-          <div class="nav-links">
-            <a href="{{ url_for('painel') }}">Recursos</a>
-            <a href="{{ url_for('sobre') }}" class="aux">Sobre</a>
-            <a href="{{ url_for('contato') }}">Contato</a>
-          </div>
-
-          <!-- Ações de usuário à direita -->
-          <div class="nav-user">
-            {% if current_user.is_authenticated %}
-              <span class="usuario-logado">Olá, {{ current_user.nome }}!</span>
-              <a href="{{ url_for('logout') }}" class="sair">Sair</a>
-            {% else %}
-              <a href="{{ url_for('login') }}">Login</a>
-              <a href="{{ url_for('cadastro') }}" id="painel" class="aux">Cadastrar</a>
-            {% endif %}
-          </div>
+        <!-- Ações de usuário à direita -->
+        <div class="nav-user">
+          {% if current_user.is_authenticated %}
+            <span class="usuario-logado">Olá, {{ current_user.nome }}!</span>
+            <a href="{{ url_for('logout') }}" class="sair">Sair</a>
+          {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('cadastro') }}" id="painel" class="aux">Cadastrar</a>
+          {% endif %}
         </div>
       </div>
-    </nav>
-  </header>
-
-  <main>
-    <div>
-      {% block conteudo %}{% endblock %}
     </div>
-  </main>
-</body>
-</html>
+  </nav>
+</header>

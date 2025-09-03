@@ -171,47 +171,140 @@ body {
 }
 
 .btn:hover {
-    background-color: #006e48;
     transform: translateY(-3px);
     box-shadow: var(--shadow);
     color: var(--white);
 }
 
-/* Responsividade */
-@media (max-width: 992px) {
+/* Estilos específicos para os novos boxes */
+.box-10,
+.box-11,
+.box-12,
+.box-13 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 320px;
+    width: 300px;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    text-align: center;
+    padding: 30px 20px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.box-10:before,
+.box-11:before,
+.box-12:before,
+.box-13:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+.box-10:hover,
+.box-11:hover,
+.box-12:hover,
+.box-13:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade melhorada */
+@media (max-width: 1024px) {
     .boxs {
-        max-width: 650px;
+        gap: 25px;
+        max-width: 900px;
+    }
+    
+    .boxs > div {
+        width: 280px;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+    
+    .texto-init {
+        padding: 40px 0 20px;
+    }
+    
+    .texto-init h1 {
+        font-size: 2.2rem;
+    }
+    
+    .texto-init p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
     .boxs {
         flex-direction: column;
         align-items: center;
-        gap: 32px;
-    }
-    .boxs > div {
-        width: 90vw;
+        gap: 25px;
         max-width: 350px;
-        height: 320px;
+        margin: 0 auto;
     }
-    .container {
-        padding: 0 8px;
+    
+    .boxs > div {
+        width: 100%;
+        max-width: 320px;
+        height: 300px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
     .texto-init h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
+    
+    .texto-init p {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+    
+    .boxs {
+        max-width: 280px;
+    }
+    
     .boxs > div {
-        height: 260px;
-        width: 98vw;
-        max-width: 98vw;
+        width: 100%;
+        max-width: 280px;
+        height: 280px;
+        padding: 20px 15px;
     }
+    
     .boxs img {
-        width: 44px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        width: 45px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .boxs h2 {
+        font-size: 1rem;
+    }
+    
+    .boxs h3 {
+        font-size: 0.85rem;
+        padding-bottom: 10px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        margin-top: 5px;
     }
 }

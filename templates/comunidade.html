@@ -39,85 +39,6 @@
             </div>
         </div>
 
-        <!-- Study Groups -->
-        <div class="community-section">
-            <div class="section-header">
-                <h2>Grupos de Estudo</h2>
-                <p>Participe de grupos colaborativos</p>
-            </div>
-            <div class="groups-list">
-                <div class="group-item">
-                    <div class="group-info">
-                        <h3>Matemática IFRN 2024</h3>
-                        <p>Preparação focada no exame do IFRN</p>
-                        <span class="group-stats">24 membros • Ativo agora</span>
-                    </div>
-                    <a href="#" class="btn-join">Participar</a>
-                </div>
-                <div class="group-item">
-                    <div class="group-info">
-                        <h3>Frações & Proporções</h3>
-                        <p>Dominando frações e proporções</p>
-                        <span class="group-stats">18 membros • Ativo há 1h</span>
-                    </div>
-                    <a href="#" class="btn-join">Participar</a>
-                </div>
-                <div class="group-item">
-                    <div class="group-info">
-                        <h3>Resolução de Exercícios</h3>
-                        <p>Resolvemos exercícios em conjunto</p>
-                        <span class="group-stats">31 membros • Ativo há 30min</span>
-                    </div>
-                    <a href="#" class="btn-join">Participar</a>
-                </div>
-            </div>
-            <div class="section-action">
-                <a href="#" class="btn-primary">Ver Todos os Grupos</a>
-            </div>
-        </div>
-
-        <!-- Community Tools -->
-        <div class="community-section">
-            <div class="section-header">
-                <h2>Ferramentas da Comunidade</h2>
-                <p>Recursos para melhorar sua experiência de estudo</p>
-            </div>
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <h3>Ranking</h3>
-                    <p>Veja os estudantes mais ativos da comunidade</p>
-                    <div class="tool-stats">
-                        <span>1º Carlos - 1,250 pts</span>
-                        <span>2º Ana - 980 pts</span>
-                    </div>
-                    <a href="#" class="btn-tool">Ver Ranking</a>
-                </div>
-                <div class="tool-card">
-                    <h3>Chat</h3>
-                    <p>Converse em tempo real com outros estudantes</p>
-                    <div class="tool-stats">
-                        <span>47 estudantes online</span>
-                    </div>
-                    <a href="#" class="btn-tool">Entrar no Chat</a>
-                </div>
-                <div class="tool-card">
-                    <h3>Mentoria</h3>
-                    <p>Receba orientação personalizada</p>
-                    <div class="tool-stats">
-                        <span>8 mentores disponíveis</span>
-                    </div>
-                    <a href="#" class="btn-tool">Solicitar Mentoria</a>
-                </div>
-                <div class="tool-card">
-                    <h3>Desafios</h3>
-                    <p>Resolva desafios semanais</p>
-                    <div class="tool-stats">
-                        <span>Atual: Frações Complexas</span>
-                    </div>
-                    <a href="#" class="btn-tool">Participar</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -241,93 +162,6 @@
     font-size: 0.9rem;
 }
 
-/* Groups Styles */
-.groups-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: var(--light-bg);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.group-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 143, 94, 0.1);
-}
-
-.group-info h3 {
-    color: var(--secondary-color);
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.group-info p {
-    color: var(--text-color);
-    margin-bottom: 5px;
-}
-
-.group-stats {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-/* Tools Grid */
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.tool-card {
-    background: var(--light-bg);
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.tool-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 143, 94, 0.1);
-}
-
-.tool-card h3 {
-    font-family: 'Fjalla One', serif;
-    color: var(--secondary-color);
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.tool-card p {
-    color: var(--text-light);
-    margin-bottom: 15px;
-}
-
-.tool-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 20px;
-}
-
-.tool-stats span {
-    background: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
 
 /* Section action layout */
 .section-action {
@@ -339,31 +173,88 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .community-container {
+        padding: 30px 15px;
+    }
+    
+    .community-header {
+        margin-bottom: 40px;
+    }
+    
     .community-header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .community-header p {
         font-size: 1rem;
+        padding: 0 20px;
     }
     
     .community-section {
-        padding: 20px;
+        padding: 25px 20px;
     }
     
-    .group-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    .section-header h2 {
+        font-size: 1.6rem;
     }
     
-    .tools-grid {
-        grid-template-columns: 1fr;
+    .topic-item {
+        padding: 18px;
+    }
+    
+    .topic-item h3 {
+        font-size: 1rem;
     }
     
     .section-action {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .community-container {
+        padding: 20px 10px;
+    }
+    
+    .community-header h1 {
+        font-size: 1.9rem;
+    }
+    
+    .community-header p {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+    
+    .community-section {
+        padding: 20px 15px;
+        margin: 0 5px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .section-header p {
+        font-size: 0.9rem;
+    }
+    
+    .topic-item {
+        padding: 15px;
+    }
+    
+    .topic-category {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+    
+    .topic-item h3 {
+        font-size: 0.95rem;
+    }
+    
+    .topic-meta {
+        font-size: 0.8rem;
     }
 }
 </style>

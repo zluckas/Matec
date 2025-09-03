@@ -251,7 +251,6 @@ body {
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3); 
 }   
 
-
 .content{
     width: 80%;
 }
@@ -306,7 +305,175 @@ body {
 .nav .sair {
   text-decoration: none;
   padding: 4px 20px;
-  
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-section {
+        padding: 60px 0 30px;
+        margin-top: 60px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .hero-text {
+        min-width: auto;
+        order: 2;
+    }
+    
+    .hero-image {
+        min-width: auto;
+        order: 1;
+    }
+    
+    .aprendamat h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
+    .aprendamat h1 span {
+        font-size: 2.5rem;
+    }
+    
+    .descricao {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .buttons {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+    
+    .mateco-img {
+        max-width: 250px;
+    }
+    
+    .features-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .features-grid {
+        gap: 20px;
+    }
+    
+    .feature-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 25px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+    
+    .saibamais {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 0;
+        gap: 20px;
+    }
+    
+    [class^="box"] {
+        width: 90%;
+        max-width: 350px;
+        height: 120px;
+        padding: 0 20px;
+    }
+    
+    .content > h2, .content > p {
+        font-size: 14px;
+    }
+    
+    .content > h2 {
+        font-size: 16px;
+    }
+    
+    .create {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .create h3 {
+        font-size: 20px;
+    }
+    
+    .create h5 {
+        font-size: 16px;
+    }
+    
+    .create .button-criar-conta-gratuita {
+        width: 200px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .aprendamat h1 {
+        font-size: 1.8rem;
+    }
+    
+    .aprendamat h1 span {
+        font-size: 2rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+    
+    .mateco-img {
+        max-width: 200px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    [class^="box"] {
+        width: 95%;
+        height: 100px;
+        padding: 0 15px;
+    }
+    
+    .saibamais img {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 

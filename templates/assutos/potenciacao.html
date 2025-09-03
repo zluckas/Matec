@@ -1,13 +1,13 @@
 {% extends 'base3.html' %}
 
-{% block title %}Matec - Frações{% endblock %}
+{% block title %}Matec - Potenciação{% endblock %}
 
 {% block conteudo %}
 <div class="container">
     <!-- Cabeçalho da página -->
     <div class="page-header">
-        <h1 class="page-title">Frações</h1>
-        <p class="page-subtitle">Aprenda tudo sobre frações com videoaulas, materiais didáticos e jogos interativos</p>
+        <h1 class="page-title">Potenciação</h1>
+        <p class="page-subtitle">Aprenda as regras e propriedades da potenciação com videoaulas, materiais didáticos e jogos interativos</p>
     </div>
 
     <!-- Seção de Videoaulas -->
@@ -15,36 +15,36 @@
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/video.png') }}" alt="Videoaulas" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Videoaulas</h2>
         <div class="video-grid">
             <div class="video-card">
-                <a href="https://youtu.be/kRQW6zYETe0" target="_blank" class="video-link">
+                <a href="https://youtu.be/example3" target="_blank" class="video-link">
                     <div class="video-thumbnail">
-                        <img src="https://img.youtube.com/vi/kRQW6zYETe0/hqdefault.jpg" alt="Introdução às Frações - Teoria Completa" class="thumbnail-img" onerror="this.src='https://img.youtube.com/vi/kRQW6zYETe0/mqdefault.jpg'">
+                        <img src="https://img.youtube.com/vi/example3/hqdefault.jpg" alt="Introdução à Potenciação" class="thumbnail-img" onerror="this.src='https://img.youtube.com/vi/example3/mqdefault.jpg'">
                         <div class="play-button">▶️</div>
                     </div>
                     <div class="video-info">
-                        <h3 class="video-title">Introdução às Frações - Teoria Completa</h3>
-                        <p class="video-duration">Duração: 25 min</p>
+                        <h3 class="video-title">Introdução à Potenciação</h3>
+                        <p class="video-duration">Duração: 16 min</p>
                     </div>
                 </a>
             </div>
             <div class="video-card">
                 <div class="video-thumbnail">▶️</div>
                 <div class="video-info">
-                    <h3 class="video-title">Resolução: Soma e Subtração de Frações</h3>
-                    <p class="video-duration">Duração: 18 min</p>
+                    <h3 class="video-title">Propriedades da Potenciação</h3>
+                    <p class="video-duration">Duração: 24 min</p>
                 </div>
             </div>
             <div class="video-card">
                 <div class="video-thumbnail">▶️</div>
                 <div class="video-info">
-                    <h3 class="video-title">Resolução: Multiplicação e Divisão</h3>
-                    <p class="video-duration">Duração: 20 min</p>
+                    <h3 class="video-title">Potência de Potência</h3>
+                    <p class="video-duration">Duração: 19 min</p>
                 </div>
             </div>
             <div class="video-card">
                 <div class="video-thumbnail">▶️</div>
                 <div class="video-info">
-                    <h3 class="video-title">Resolução: Questões IFRN</h3>
-                    <p class="video-duration">Duração: 22 min</p>
+                    <h3 class="video-title">Exercícios Resolvidos</h3>
+                    <p class="video-duration">Duração: 28 min</p>
                 </div>
             </div>
         </div>
@@ -57,16 +57,16 @@
             <div class="material-item">
                 <div class="material-icon"><img src="{{ url_for('static', filename='images/icones/document.png') }}" alt="PDF" style="width: 32px; height: 32px;"></div>
                 <div class="material-info">
-                    <h3 class="material-title">Apostila Completa de Frações</h3>
-                    <p class="material-description">Material completo com teoria, exemplos e exercícios resolvidos</p>
+                    <h3 class="material-title">Apostila Completa de Potenciação</h3>
+                    <p class="material-description">Material completo com todas as propriedades e regras da potenciação</p>
                 </div>
                 <a href="#" class="download-btn">Download PDF</a>
             </div>
             <div class="material-item">
                 <div class="material-icon"><img src="{{ url_for('static', filename='images/icones/chart.png') }}" alt="Exercícios" style="width: 32px; height: 32px;"></div>
                 <div class="material-info">
-                    <h3 class="material-title">Lista de Exercícios - Nível Básico</h3>
-                    <p class="material-description">50 exercícios básicos sobre frações com gabarito</p>
+                    <h3 class="material-title">Lista de Exercícios - Potenciação</h3>
+                    <p class="material-description">60 exercícios sobre potenciação com diferentes níveis de dificuldade</p>
                 </div>
                 <a href="#" class="download-btn">Download PDF</a>
             </div>
@@ -79,10 +79,10 @@
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
         <div class="game-simple-card">
             <div class="game-icon">
-                <img src="{{ url_for('static', filename='images/icones/pizza.png') }}" alt="Pizza das Frações" style="width: 48px; height: 48px;">
+                <img src="{{ url_for('static', filename='images/icones/target.png') }}" alt="Batalha das Potências" style="width: 48px; height: 48px;">
             </div>
-            <h3 class="game-title">Pizza das Frações</h3>
-            <p class="game-description">Aprenda frações de forma divertida dividindo pizzas!</p>
+            <h3 class="game-title">Batalha das Potências</h3>
+            <p class="game-description">Resolva operações com potências e vença os desafios!</p>
             <a href="#" class="btn green">Jogar Agora</a>
         </div>
     </section>
@@ -93,8 +93,8 @@
             <div class="card-icon">
                 <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora">
             </div>
-            <h3 class="card-title">Calculadora de Frações</h3>
-            <p class="card-description">Use nossa calculadora online para verificar seus cálculos com frações</p>
+            <h3 class="card-title">Calculadora de Potências</h3>
+            <p class="card-description">Calcule potências e verifique suas resoluções</p>
             <a href="#" class="card-button">Usar Calculadora</a>
         </div>
         
@@ -103,7 +103,7 @@
                 <img src="{{ url_for('static', filename='images/grupo.png') }}" alt="Fórum">
             </div>
             <h3 class="card-title">Fórum de Dúvidas</h3>
-            <p class="card-description">Tire suas dúvidas sobre frações com outros estudantes e professores</p>
+            <p class="card-description">Tire suas dúvidas sobre potenciação com outros estudantes</p>
             <a href="#" class="card-button">Acessar Fórum</a>
         </div>
         
@@ -112,7 +112,7 @@
                 <img src="{{ url_for('static', filename='images/abra-o-livro.png') }}" alt="Simulado">
             </div>
             <h3 class="card-title">Simulado</h3>
-            <p class="card-description">Teste seus conhecimentos com um simulado completo sobre frações</p>
+            <p class="card-description">Teste seus conhecimentos sobre potenciação</p>
             <a href="#" class="card-button">Fazer Simulado</a>
         </div>
     </div>

@@ -8,6 +8,7 @@
 
 body {
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Navbar fixa no topo */
@@ -86,4 +87,86 @@ body {
 .botao-sair:hover,
 .botao-extra:hover {
     border-bottom: 3px solid #008F5E;
+}
+
+/* Responsividade para navbar */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 28px;
+        width: auto;
+        flex-shrink: 0;
+        justify-content: center;
+        margin-left: 20px;
+    }
+    
+    .logo img {
+        width: 35px;
+    }
+    
+    .botoes-nav {
+        width: auto;
+        justify-content: flex-end;
+        padding-right: 0;
+        gap: 15px;
+        flex-shrink: 0;
+    }
+    
+    #user {
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 4px 8px;
+    }
+    
+    .botao-sair,
+    .botao-extra {
+        font-size: 14px;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }
+    
+    .botao-extra {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 24px;
+        justify-content: center;
+        margin-left: 15px;
+    }
+    
+    .logo img {
+        width: 30px;
+    }
+    
+    .botoes-nav {
+        gap: 8px;
+        justify-content: flex-end;
+    }
+    
+    #user {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+    
+    .botao-sair,
+    .botao-extra {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+    
+    .botao-extra {
+        margin-right: 5px;
+    }
 }

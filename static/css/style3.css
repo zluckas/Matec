@@ -25,13 +25,16 @@ body {
     background-color: var(--light-bg);
 }
 
-/* Navbar */
+/* Navbar - usando estilos do base2 */
 .navbar {
     display: flex;
     position: fixed;
     width: 100vw;
     height: 8vh;
-    background-color: rgb(254, 255, 255);
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    align-items: center;
+    justify-content: space-between;
     top: 0;
     z-index: 1000;
 }
@@ -42,7 +45,8 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    font-family: "Fjalla One", serif;
+    font-family: 'Poppins', sans-serif;
+    gap: 5px;
 }
 
 .logo a {
@@ -50,7 +54,6 @@ body {
     color: #2D3748;
     display: flex;
     align-items: center;
-    gap: 5px;
 }
 
 .logo a:hover {
@@ -77,6 +80,9 @@ body {
     color: #008F5E;
     display: flex;
     align-items: center;
+    white-space: nowrap;
+    min-width: 120px;
+    padding: 4px 20px;
 }
 
 .botao-sair,
@@ -92,53 +98,380 @@ body {
     margin-right: 50px;
 }
 
+.botao-sair {
+    margin-left: 5px;
+}
+
 .botao-sair:hover,
 .botao-extra:hover {
     border-bottom: 3px solid #008F5E;
 }
 
+/* Responsividade para navbar */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 28px;
+        width: auto;
+        flex-shrink: 0;
+        justify-content: center;
+        margin-left: 20px;
+    }
+    
+    .logo img {
+        width: 35px;
+    }
+    
+    .botoes-nav {
+        width: auto;
+        justify-content: flex-end;
+        padding-right: 0;
+        gap: 15px;
+        flex-shrink: 0;
+    }
+    
+    #user {
+        font-size: 14px;
+        white-space: nowrap;
+        padding: 4px 8px;
+        min-width: auto;
+    }
+    
+    .botao-sair,
+    .botao-extra {
+        font-size: 14px;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }
+    
+    .botao-extra {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        font-size: 24px;
+        justify-content: center;
+        margin-left: 15px;
+        width: auto;
+    }
+    
+    .logo img {
+        width: 30px;
+    }
+    
+    .botoes-nav {
+        gap: 8px;
+        justify-content: flex-end;
+        width: auto;
+        padding-right: 0;
+    }
+    
+    #user {
+        font-size: 13px;
+        padding: 4px 6px;
+        min-width: auto;
+    }
+    
+    .botao-sair,
+    .botao-extra {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+    
+    .botao-extra {
+        margin-right: 5px;
+    }
+}
+
+/* Responsividade para conteúdo */
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .content-card {
+        padding: 20px 15px;
+        min-height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+    
+    .page-header {
+        padding: 40px 20px 30px;
+        margin-bottom: 30px;
+    }
+    
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .content-card {
+        max-width: 380px;
+        margin: 0 auto;
+        min-height: 240px;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .video-section {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+    
+    .page-header {
+        padding: 30px 15px 25px;
+    }
+    
+    .page-title {
+        font-size: 1.9rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+    
+    .content-card {
+        max-width: 100%;
+        padding: 20px 15px;
+        min-height: 220px;
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .card-icon img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-description {
+        font-size: 0.9rem;
+    }
+    
+    .card-button,
+    .game-button,
+    .material-download {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .video-section {
+        padding: 25px 15px;
+    }
+}
+
+/* Jogo interativo simplificado - estilo card comum */
+.game-section {
+    padding: 40px 0;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+}
+
+.game-section .section-title {
+    padding-left: 40px;
+}
+
+.game-simple-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game-simple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.game-simple-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+.game-simple-card .game-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--light-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-simple-card .game-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.game-simple-card .game-description {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+/* Responsividade para o jogo */
+@media (max-width: 768px) {
+    .game-simple-card {
+        padding: 25px 20px;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-section {
+        padding: 30px 0;
+    }
+    
+    .game-simple-card {
+        padding: 20px 15px;
+        max-width: 100%;
+        margin: 0 15px;
+    }
+    
+    .game-simple-card .game-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .game-simple-card .game-title {
+        font-size: 1.2rem;
+    }
+    
+    .game-simple-card .game-description {
+        font-size: 0.95rem;
+    }
+}
+
 /* Conteúdo principal */
 .main-content {
-    margin-top: 8vh;
-    min-height: calc(100vh - 8vh);
-    padding: 40px 0;
+    margin-top: 6vh;
+    min-height: calc(100vh - 6vh);
+    padding: 30px 0;
+    background-color: var(--light-bg);
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
 /* Cabeçalho da página */
 .page-header {
     text-align: center;
-    padding: 60px 0 40px;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
     background-color: var(--white);
-    margin-bottom: 40px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
 
 .page-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--secondary-color);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+.page-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
 }
 
 .page-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-light);
-    font-family: "Fjalla One", serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Grid de conteúdos */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
     margin-bottom: 40px;
     margin-top: 40px;
 }
@@ -151,15 +484,16 @@ body {
     justify-content: center;
     background-color: var(--white);
     border-radius: var(--border-radius);
-    padding: 30px;
+    padding: 25px 20px;
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    min-height: 280px;
 }
 
 .content-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -169,8 +503,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), #00b570);
+    height: 5px;
+    background-color: var(--primary-color);
 }
 
 .card-icon {
@@ -192,16 +526,22 @@ body {
 }
 
 .card-title {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 .card-description {
     color: var(--text-light);
     margin-bottom: 20px;
-    line-height: 1.6;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 /* Universal button styles - matching index page "começar agora" style */
@@ -211,20 +551,21 @@ body {
 .btn-primary,
 .btn-secondary,
 .btn-join,
-.btn-tool {
-    padding: 15px 40px;
-    font-size: 1rem;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-family: "Fjalla One", serif;
-    font-weight: 400;
-    transition: var(--transition);
+.btn-tool,
+.btn {
     display: inline-block;
+    padding: 15px 40px;
     background-color: var(--primary-color);
     color: var(--white);
-    box-shadow: none;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: var(--transition);
     border: none;
     cursor: pointer;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-button:hover,
@@ -233,12 +574,32 @@ body {
 .btn-primary:hover,
 .btn-secondary:hover,
 .btn-join:hover,
-.btn-tool:hover {
-    box-shadow: var(--shadow);
+.btn-tool:hover,
+.btn:hover {
     transform: translateY(-3px);
-    background-color: #006e48;
+    box-shadow: var(--shadow);
+}
+
+/* Button color variants */
+.btn.green {
+    background-color: var(--primary-color);
     color: var(--white);
-    text-decoration: none;
+}
+
+.btn.green:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn.white {
+    background: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn.white:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
 }
 
 /* Secondary button specific styling */
@@ -253,8 +614,27 @@ body {
     color: var(--white);
 }
 
+/* Download button styling - matching index style */
+.download-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: var(--transition);
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
 /* Smaller button adjustments */
-.material-download,
 .btn-join,
 .btn-tool {
     padding: 12px 30px;
@@ -300,14 +680,43 @@ body {
     width: 100%;
     height: 200px;
     background: linear-gradient(135deg, var(--primary-color), #00b570);
+    border-radius: 15px 15px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 3rem;
     color: var(--white);
-    font-size: 4rem;
-    transition: all 0.2s ease;
     position: relative;
     overflow: hidden;
+}
+
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.video-card:hover .play-button {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .video-thumbnail::before {

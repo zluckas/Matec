@@ -4,7 +4,7 @@
             <a class="botao-extra" href="{{ url_for('painel') }}">Voltar</a>
         {% endif %}
         <a id="user">Olá, {{ current_user.nome }}</a>
-        <a class="botao-sair" href="{{ url_for('index') }}">Sair</a>
+        <a class="botao-sair" href="{{ url_for('logout') }}" onclick="return confirm('Tem certeza que deseja sair?')">Sair</a>
     {% else %}
         <a href="{{ url_for('index') }}" class="botao-extra">Início</a>
         {% if request.path == url_for('login') %}

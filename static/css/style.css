@@ -21,9 +21,8 @@ body{
     background-color: rgb(254, 255, 255);
     top: 0;
     z-index: 1000;
-  
-    
 }
+
 
 .logo {
     display: flex;
@@ -31,7 +30,7 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 30px;
-     font-family: "Fjalla One", serif;
+    font-family: "Fjalla One", serif;
 }
 
 .logo a {
@@ -44,9 +43,41 @@ body{
     transition: all 0.2s ease-in-out;
 }
 
-/* #15C315 */
 .logo img {
     width: 40px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    position: relative;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #2D3748;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .nav {
@@ -58,6 +89,17 @@ body{
     font-size: 13px;
     font-family: "Fjalla One", serif;
     letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 5%;
+}
+
+.nav-user {
+    display: flex;
+    gap: 5%;
+    align-items: center;
 }
 
 .nav a {
@@ -130,13 +172,93 @@ body{
 
 .nav .sair {
     text-decoration: none;
-    padding: 4px;
+    padding: 4px -20;
     color: black;
     transition: all 0.2s ease-in-out;
 }
 
 .nav .usuario-logado {
     text-decoration: none;
-    padding: 4px -10px;
+    padding: 4px 20px;
     color: #008f5e;
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .nav {
+        position: fixed;
+        top: 8vh;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 8vh);
+        background-color: rgba(254, 255, 255, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+        transition: left 0.3s ease;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav.active {
+        left: 0;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .nav-user {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav a {
+        font-size: 18px;
+        padding: 15px 30px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .nav a:hover {
+        background-color: #008f5e;
+        color: white;
+        border-bottom: none;
+        transform: translateY(-2px);
+    }
+    
+    .logo {
+        font-size: 24px;
+        width: auto;
+        justify-content: flex-start;
+    }
+    
+    .logo img {
+        width: 35px;
+    }
+    
+    .usuario-logado {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 10px;
+        white-space: nowrap;
+    }
 }

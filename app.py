@@ -48,11 +48,31 @@ def painel():
 def conteudos():
     return render_template('conteudos.html')
 
-# Rota para a página de frações
+# Rotas para páginas de conteúdo
 @app.route('/fracao')
 @login_required
 def fracao():
     return render_template('assutos/fracao.html')
+
+@app.route('/conjuntos')
+@login_required
+def conjuntos():
+    return render_template('assutos/conjuntos.html')
+
+@app.route('/sistema')
+@login_required
+def sistema():
+    return render_template('assutos/sistema.html')
+
+@app.route('/potenciacao')
+@login_required
+def potenciacao():
+    return render_template('assutos/potenciacao.html')
+
+@app.route('/radiciacao')
+@login_required
+def radiciacao():
+    return render_template('assutos/radiciacao.html')
 
 # Rota para a página de comunidade
 @app.route('/comunidade')
