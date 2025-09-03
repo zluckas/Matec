@@ -163,7 +163,7 @@ body {
     letter-spacing: 0.9px;
     cursor: pointer;
     transition: var(--transition);
-    font-family: "Fjalla One", serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     border: none;
     margin: 0 auto;
