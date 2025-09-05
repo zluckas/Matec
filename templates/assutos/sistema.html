@@ -60,7 +60,7 @@
                     <h3 class="material-title">Apostila de Sistemas de Numeração</h3>
                     <p class="material-description">Material completo sobre diferentes bases numéricas e conversões</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/apostila-sistema.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
             <div class="material-item">
                 <div class="material-icon"><img src="{{ url_for('static', filename='images/icones/chart.png') }}" alt="Exercícios" style="width: 32px; height: 32px;"></div>
@@ -68,7 +68,7 @@
                     <h3 class="material-title">Exercícios de Conversão</h3>
                     <p class="material-description">35 exercícios de conversão entre bases com resolução passo a passo</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/exercicios-sistema.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
            
         </div>
@@ -77,13 +77,13 @@
     <!-- Seção de Jogo Interativo -->
     <section class="game-section">
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
-        <div class="game-simple-card">
-            <div class="game-icon">
-                <img src="{{ url_for('static', filename='images/icones/target.png') }}" alt="Conversor de Bases" style="width: 48px; height: 48px;">
+        <div class="game-detailed-card">
+            <div class="game-info">
+                <h3 class="game-title">Conversor de Bases</h3>
+                <p class="game-description">Jogo interativo da Cisco que ensina o sistema binário de forma prática. Você aprende a converter números entre decimal e binário, entendendo como os computadores processam informações. Ideal para compreender diferentes bases numéricas.</p>
+                <p class="game-credit">Desenvolvido por: Cisco Learning Network</p>
             </div>
-            <h3 class="game-title">Conversor de Bases</h3>
-            <p class="game-description">Pratique conversões entre diferentes sistemas de numeração!</p>
-            <a href="#" class="btn green">Jogar Agora</a>
+            <a href="https://learningcontent.cisco.com/games/binary/index.html" class="download-btn" target="_blank">Jogar Agora</a>
         </div>
     </section>
 

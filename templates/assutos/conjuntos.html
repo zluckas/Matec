@@ -60,7 +60,7 @@
                     <h3 class="material-title">Apostila Completa de Conjuntos</h3>
                     <p class="material-description">Material completo com teoria, exemplos e exercícios sobre conjuntos numéricos</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/apostila-conjuntos.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
             <div class="material-item">
                 <div class="material-icon"><img src="{{ url_for('static', filename='images/icones/chart.png') }}" alt="Exercícios" style="width: 32px; height: 32px;"></div>
@@ -68,7 +68,7 @@
                     <h3 class="material-title">Lista de Exercícios - Conjuntos</h3>
                     <p class="material-description">40 exercícios sobre conjuntos numéricos com gabarito detalhado</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/exercicios-conjuntos.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
            
         </div>
@@ -77,13 +77,13 @@
     <!-- Seção de Jogo Interativo -->
     <section class="game-section">
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
-        <div class="game-simple-card">
-            <div class="game-icon">
-                <img src="{{ url_for('static', filename='images/icones/target.png') }}" alt="Classificador de Números" style="width: 48px; height: 48px;">
+        <div class="game-detailed-card">
+            <div class="game-info">
+                <h3 class="game-title">Classificador de Números</h3>
+                <p class="game-description">Pratique operações aritméticas na reta numérica e aprenda a classificar números em diferentes conjuntos (naturais, inteiros, racionais, irracionais). O jogo ajuda a visualizar a posição dos números e suas relações.</p>
+                <p class="game-credit">Desenvolvido por: Math Playground</p>
             </div>
-            <h3 class="game-title">Classificador de Números</h3>
-            <p class="game-description">Classifique números nos conjuntos corretos de forma divertida!</p>
-            <a href="#" class="btn green">Jogar Agora</a>
+            <a href="https://www.mathplayground.com/number_line_arithmetic.html" class="download-btn" target="_blank">Jogar Agora</a>
         </div>
     </section>
 

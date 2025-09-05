@@ -60,7 +60,7 @@
                     <h3 class="material-title">Apostila Completa de Potenciação</h3>
                     <p class="material-description">Material completo com todas as propriedades e regras da potenciação</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/apostila-potenciacao.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
             <div class="material-item">
                 <div class="material-icon"><img src="{{ url_for('static', filename='images/icones/chart.png') }}" alt="Exercícios" style="width: 32px; height: 32px;"></div>
@@ -68,7 +68,7 @@
                     <h3 class="material-title">Lista de Exercícios - Potenciação</h3>
                     <p class="material-description">60 exercícios sobre potenciação com diferentes níveis de dificuldade</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/exercicios-potenciacao.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
            
         </div>
@@ -77,13 +77,13 @@
     <!-- Seção de Jogo Interativo -->
     <section class="game-section">
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
-        <div class="game-simple-card">
-            <div class="game-icon">
-                <img src="{{ url_for('static', filename='images/icones/target.png') }}" alt="Batalha das Potências" style="width: 48px; height: 48px;">
+        <div class="game-detailed-card">
+            <div class="game-info">
+                <h3 class="game-title">Batalha das Potências</h3>
+                <p class="game-description">Plataforma interativa da Khan Academy com exercícios práticos sobre expoentes e radicais. Inclui vídeos explicativos, exercícios adaptativos e feedback imediato. Perfeito para dominar as propriedades da potenciação passo a passo.</p>
+                <p class="game-credit">Desenvolvido por: Khan Academy</p>
             </div>
-            <h3 class="game-title">Batalha das Potências</h3>
-            <p class="game-description">Resolva operações com potências e vença os desafios!</p>
-            <a href="#" class="btn green">Jogar Agora</a>
+            <a href="https://www.khanacademy.org/math/algebra-basics/alg-basics-exponents-radicals" class="download-btn" target="_blank">Jogar Agora</a>
         </div>
     </section>
 

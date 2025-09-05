@@ -60,7 +60,7 @@
                     <h3 class="material-title">Apostila Completa de Frações</h3>
                     <p class="material-description">Material completo com teoria, exemplos e exercícios resolvidos</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/apostila-fracoes.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
             <div class="material-item">
                 <div class="material-icon"><img src="{{ url_for('static', filename='images/icones/chart.png') }}" alt="Exercícios" style="width: 32px; height: 32px;"></div>
@@ -68,7 +68,7 @@
                     <h3 class="material-title">Lista de Exercícios - Nível Básico</h3>
                     <p class="material-description">50 exercícios básicos sobre frações com gabarito</p>
                 </div>
-                <a href="#" class="download-btn">Download PDF</a>
+                <a href="{{ url_for('static', filename='pdfs/exercicios-fracoes.pdf') }}" class="download-btn" target="_blank">Download PDF</a>
             </div>
            
         </div>
@@ -77,13 +77,13 @@
     <!-- Seção de Jogo Interativo -->
     <section class="game-section">
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
-        <div class="game-simple-card">
-            <div class="game-icon">
-                <img src="{{ url_for('static', filename='images/icones/pizza.png') }}" alt="Pizza das Frações" style="width: 48px; height: 48px;">
+        <div class="game-detailed-card">
+            <div class="game-info">
+                <h3 class="game-title">Pizza das Frações</h3>
+                <p class="game-description">Neste jogo interativo, você ajuda pandas famintos a dividir pizzas em frações. Clique nas fatias para representar diferentes frações e aprenda conceitos como frações equivalentes, soma e subtração de frações de forma visual e divertida.</p>
+                <p class="game-credit">Desenvolvido por: Coquinhos - Jogos Educativos</p>
             </div>
-            <h3 class="game-title">Pizza das Frações</h3>
-            <p class="game-description">Aprenda frações de forma divertida dividindo pizzas!</p>
-            <a href="#" class="btn green">Jogar Agora</a>
+            <a href="https://www.coquinhos.com/fracoes-pizza-com-pandas/" class="download-btn" target="_blank">Jogar Agora</a>
         </div>
     </section>
 
