@@ -80,6 +80,33 @@ def radiciacao():
 def comunidade():
     return render_template('comunidade.html')
 
+# Rotas para funcionalidades do fórum
+@app.route('/forum/discussoes')
+@login_required
+def forum_discussoes():
+    # Por enquanto redireciona para a página da comunidade
+    # Futuramente pode ter uma página específica para todas as discussões
+    flash('Funcionalidade em desenvolvimento! Em breve você poderá ver todas as discussões.')
+    return redirect(url_for('comunidade'))
+
+@app.route('/forum/nova-discussao', methods=['GET', 'POST'])
+@login_required
+def nova_discussao():
+    if request.method == 'POST':
+        categoria = request.form.get('categoria')
+        titulo = request.form.get('titulo')
+        conteudo = request.form.get('conteudo')
+        
+        if categoria and titulo and conteudo:
+            # Aqui você pode salvar a discussão no banco de dados
+            # Por enquanto, apenas mostra uma mensagem de sucesso
+            flash(f'Discussão "{titulo}" criada com sucesso na categoria {categoria}!')
+            return redirect(url_for('comunidade'))
+        else:
+            flash('Por favor, preencha todos os campos obrigatórios.')
+    
+    return render_template('nova_discussao.html')
+
 @app.route('/sobre')
 #@login_required
 def sobre():

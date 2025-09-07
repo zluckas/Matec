@@ -34,8 +34,8 @@
                 </div>
             </div>
             <div class="section-action">
-                <a href="#" class="btn-primary">Ver Todas as Discussões</a>
-                <a href="#" class="btn-secondary">Nova Discussão</a>
+                <a href="{{ url_for('forum_discussoes') }}" class="btn-primary">Ver Todas as Discussões</a>
+                <a href="{{ url_for('nova_discussao') }}" class="btn-secondary">Nova Discussão</a>
             </div>
         </div>
 
@@ -84,7 +84,7 @@
     color: var(--text-light);
     max-width: 600px;
     margin: 0 auto;
-    font-family: "Fjalla One", serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .community-content {
@@ -170,6 +170,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
