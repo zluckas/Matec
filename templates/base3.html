@@ -13,15 +13,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">
-            <a href="{{ url_for('index') }}">
-                Matec <img src="{{ url_for('static', filename='images/logo_matec.png') }}" alt="" />
-            </a>
-        </div>
-
-        {% include 'components/botoes_nav.html' %}
-    </div>
+    {% include 'partials/navbar.html' %}
 
     <!-- Conteúdo Principal -->
     <main class="main-content">
