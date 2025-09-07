@@ -1,0 +1,68 @@
+<!-- Modal da Calculadora -->
+<div id="calculator-modal" class="calculator-modal">
+    <div class="calculator-content">
+        <div class="calculator-header">
+            <h3 class="calculator-title">Calculadora</h3>
+            <button class="close-calc" onclick="closeCalculator()">&times;</button>
+        </div>
+        
+        <div class="calculator">
+            <input type="text" id="calc-display" class="calc-display" readonly value="0">
+            
+            <div class="calc-buttons">
+                <!-- Linha 1 -->
+                <button class="calc-btn clear" data-type="clear">C</button>
+                <button class="calc-btn operator" data-type="operator" data-value="/">&divide;</button>
+                <button class="calc-btn operator" data-type="operator" data-value="*">&times;</button>
+                <button class="calc-btn operator" data-type="operator" data-value="-">-</button>
+                
+                <!-- Linha 2 -->
+                <button class="calc-btn number" data-type="number" data-value="7">7</button>
+                <button class="calc-btn number" data-type="number" data-value="8">8</button>
+                <button class="calc-btn number" data-type="number" data-value="9">9</button>
+                <button class="calc-btn operator" data-type="operator" data-value="+">+</button>
+                
+                <!-- Linha 3 -->
+                <button class="calc-btn number" data-type="number" data-value="4">4</button>
+                <button class="calc-btn number" data-type="number" data-value="5">5</button>
+                <button class="calc-btn number" data-type="number" data-value="6">6</button>
+                <button class="calc-btn equals" data-type="equals" style="grid-row: span 2;">=</button>
+                
+                <!-- Linha 4 -->
+                <button class="calc-btn number" data-type="number" data-value="1">1</button>
+                <button class="calc-btn number" data-type="number" data-value="2">2</button>
+                <button class="calc-btn number" data-type="number" data-value="3">3</button>
+                
+                <!-- Linha 5 -->
+                <button class="calc-btn number" data-type="number" data-value="0" style="grid-column: span 2;">0</button>
+                <button class="calc-btn number" data-type="decimal">.</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openCalculator() {
+    document.getElementById('calculator-modal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCalculator() {
+    document.getElementById('calculator-modal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Fechar calculadora clicando fora dela
+document.getElementById('calculator-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeCalculator();
+    }
+});
+
+// Fechar com ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('calculator-modal').style.display === 'block') {
+        closeCalculator();
+    }
+});
+</script>

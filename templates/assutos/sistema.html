@@ -79,11 +79,11 @@
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
         <div class="game-detailed-card">
             <div class="game-info">
-                <h3 class="game-title">Conversor de Bases</h3>
-                <p class="game-description">Jogo interativo da Cisco que ensina o sistema binário de forma prática. Você aprende a converter números entre decimal e binário, entendendo como os computadores processam informações. Ideal para compreender diferentes bases numéricas.</p>
-                <p class="game-credit">Desenvolvido por: Cisco Learning Network</p>
+                <h3 class="game-title">Calculadora de Bases Numéricas</h3>
+                <p class="game-description">Ferramenta educativa da RapidTables para converter números entre diferentes bases (binário, octal, decimal, hexadecimal). Interface simples e intuitiva que permite compreender como funciona a conversão entre sistemas de numeração, essencial para ciência da computação.</p>
+                <p class="game-credit">Desenvolvido por: RapidTables</p>
             </div>
-            <a href="https://learningcontent.cisco.com/games/binary/index.html" class="download-btn" target="_blank">Jogar Agora</a>
+            <a href="https://www.rapidtables.com/convert/number/base-converter.html" class="download-btn" target="_blank">Jogar Agora</a>
         </div>
     </section>
 
@@ -93,9 +93,9 @@
             <div class="card-icon">
                 <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora">
             </div>
-            <h3 class="card-title">Calculadora de Bases</h3>
-            <p class="card-description">Converta números entre diferentes bases numéricas</p>
-            <a href="#" class="card-button">Usar Calculadora</a>
+            <h3 class="card-title">Calculadora</h3>
+            <p class="card-description">Ferramenta para cálculos rápidos e práticos</p>
+            <a href="#" class="card-button" onclick="openCalculator(); return false;">Usar Agora</a>
         </div>
         
         <div class="content-card">
@@ -118,3 +118,6 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- Incluir calculadora -->
+{% include 'components/calculator.html' %}

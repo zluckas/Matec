@@ -93,9 +93,9 @@
             <div class="card-icon">
                 <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora">
             </div>
-            <h3 class="card-title">Calculadora de Potências</h3>
-            <p class="card-description">Calcule potências e verifique suas resoluções</p>
-            <a href="#" class="card-button">Usar Calculadora</a>
+            <h3 class="card-title">Calculadora</h3>
+            <p class="card-description">Ferramenta para cálculos rápidos e práticos</p>
+            <a href="#" class="card-button" onclick="openCalculator(); return false;">Usar Agora</a>
         </div>
         
         <div class="content-card">
@@ -118,3 +118,6 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- Incluir calculadora -->
+{% include 'components/calculator.html' %}

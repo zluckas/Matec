@@ -79,11 +79,11 @@
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
         <div class="game-detailed-card">
             <div class="game-info">
-                <h3 class="game-title">Pizza das Frações</h3>
-                <p class="game-description">Neste jogo interativo, você ajuda pandas famintos a dividir pizzas em frações. Clique nas fatias para representar diferentes frações e aprenda conceitos como frações equivalentes, soma e subtração de frações de forma visual e divertida.</p>
-                <p class="game-credit">Desenvolvido por: Coquinhos - Jogos Educativos</p>
+                <h3 class="game-title">Simulador de Frações</h3>
+                <p class="game-description">Ferramenta interativa da PhET que permite explorar frações de forma visual e prática. Construa frações usando formas, números e gráficos. Compare frações diferentes, encontre frações equivalentes e pratique operações básicas.</p>
+                <p class="game-credit">Desenvolvido por: PhET Interactive Simulations - University of Colorado Boulder</p>
             </div>
-            <a href="https://www.coquinhos.com/fracoes-pizza-com-pandas/" class="download-btn" target="_blank">Jogar Agora</a>
+            <a href="https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_pt_BR.html" class="download-btn" target="_blank">Jogar Agora</a>
         </div>
     </section>
 
@@ -93,9 +93,9 @@
             <div class="card-icon">
                 <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora">
             </div>
-            <h3 class="card-title">Calculadora de Frações</h3>
-            <p class="card-description">Use nossa calculadora online para verificar seus cálculos com frações</p>
-            <a href="#" class="card-button">Usar Calculadora</a>
+            <h3 class="card-title">Calculadora</h3>
+            <p class="card-description">Ferramenta para cálculos rápidos e práticos</p>
+            <a href="#" class="card-button" onclick="openCalculator(); return false;">Usar Agora</a>
         </div>
         
         <div class="content-card">
@@ -118,3 +118,6 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- Incluir calculadora -->
+{% include 'components/calculator.html' %}

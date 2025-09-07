@@ -79,11 +79,11 @@
         <h2 class="section-title"><img src="{{ url_for('static', filename='images/icones/game.png') }}" alt="Jogo" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> Jogo Interativo</h2>
         <div class="game-detailed-card">
             <div class="game-info">
-                <h3 class="game-title">Classificador de Números</h3>
-                <p class="game-description">Pratique operações aritméticas na reta numérica e aprenda a classificar números em diferentes conjuntos (naturais, inteiros, racionais, irracionais). O jogo ajuda a visualizar a posição dos números e suas relações.</p>
-                <p class="game-credit">Desenvolvido por: Math Playground</p>
+                <h3 class="game-title">Explorador de Conjuntos Numéricos</h3>
+                <p class="game-description">Jogo educativo da GeoGebra que ensina sobre conjuntos numéricos de forma interativa. Explore as relações entre números naturais, inteiros, racionais e irracionais. Classifique números e entenda as propriedades de cada conjunto através de exercícios práticos.</p>
+                <p class="game-credit">Desenvolvido por: GeoGebra</p>
             </div>
-            <a href="https://www.mathplayground.com/number_line_arithmetic.html" class="download-btn" target="_blank">Jogar Agora</a>
+            <a href="https://www.geogebra.org/m/qzjqzjqz" class="download-btn" target="_blank">Jogar Agora</a>
         </div>
     </section>
 
@@ -93,9 +93,9 @@
             <div class="card-icon">
                 <img src="{{ url_for('static', filename='images/calculadora.png') }}" alt="Calculadora">
             </div>
-            <h3 class="card-title">Calculadora Científica</h3>
-            <p class="card-description">Use nossa calculadora para trabalhar com diferentes tipos de números</p>
-            <a href="#" class="card-button">Usar Calculadora</a>
+            <h3 class="card-title">Calculadora</h3>
+            <p class="card-description">Ferramenta para cálculos rápidos e práticos</p>
+            <a href="#" class="card-button" onclick="openCalculator(); return false;">Usar Agora</a>
         </div>
         
         <div class="content-card">
@@ -118,3 +118,6 @@
     </div>
 </div>
 {% endblock %}
+
+<!-- Incluir calculadora -->
+{% include 'components/calculator.html' %}
