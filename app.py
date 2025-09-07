@@ -86,7 +86,6 @@ def comunidade():
 def forum_discussoes():
     # Por enquanto redireciona para a página da comunidade
     # Futuramente pode ter uma página específica para todas as discussões
-    flash('Funcionalidade em desenvolvimento! Em breve você poderá ver todas as discussões.')
     return redirect(url_for('comunidade'))
 
 @app.route('/forum/nova-discussao', methods=['GET', 'POST'])
@@ -192,7 +191,6 @@ def login():
         if resultado and check_password_hash(resultado.senha, senha):
             user = Usuario(resultado.id, resultado.username, resultado.senha)  # Cria objeto usuário
             login_user(user)  # Realiza o login (cria sessão)
-            flash('Login realizado com sucesso!')
             return redirect(url_for('painel'))
 
         flash('Usuário ou senha incorretos.')
@@ -205,7 +203,6 @@ def login():
 @login_required
 def logout():
     logout_user()  # Remove sessão do usuário
-    flash('Você saiu com sucesso.')
     return redirect(url_for('login'))  # Redireciona para a página de login
 
 if __name__ == "__main__":
