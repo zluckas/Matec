@@ -143,13 +143,16 @@ def cadastro():
             flash('Por favor, preencha todos os campos.')
             return redirect(url_for('cadastro'))
 
-        # Validação da idade mínima (10 anos)
+        # Validação da idade mínima (10 anos) e máxima (100 anos)
         try:
             data_nasc = datetime.datetime.strptime(data_nascimento, "%Y-%m-%d").date()
             hoje = datetime.date.today()
             idade = hoje.year - data_nasc.year - ((hoje.month, hoje.day) < (data_nasc.month, data_nasc.day))
             if idade < 10:
                 flash('Você precisa ter pelo menos 10 anos para se cadastrar.')
+                return redirect(url_for('cadastro'))
+            if idade > 100:
+                flash('Você precisa ter no máximo 100 anos para se cadastrar.')
                 return redirect(url_for('cadastro'))
         except Exception:
             flash('Data de nascimento inválida.')
@@ -175,7 +178,22 @@ def cadastro():
         flash('Cadastro realizado com sucesso! Faça login.')
         return redirect(url_for('login'))
 
-    return render_template('cadastro.html')  
+    # Define limites de data (client-side): mínimo = hoje - 100 anos, máximo = hoje - 10 anos
+    hoje = datetime.date.today()
+    try:
+        min_date_dt = hoje.replace(year=hoje.year - 100)
+    except ValueError:
+        # Ajusta para anos bissextos (ex.: 29/02)
+        min_date_dt = hoje.replace(month=2, day=28, year=hoje.year - 100)
+    try:
+        max_date_dt = hoje.replace(year=hoje.year - 10)
+    except ValueError:
+        max_date_dt = hoje.replace(month=2, day=28, year=hoje.year - 10)
+
+    min_date = min_date_dt.strftime("%Y-%m-%d")
+    max_date = max_date_dt.strftime("%Y-%m-%d")
+
+    return render_template('cadastro.html', min_date=min_date, max_date=max_date)  
 
 # Rota para login de usuários
 @app.route('/login', methods=['GET', 'POST'])
